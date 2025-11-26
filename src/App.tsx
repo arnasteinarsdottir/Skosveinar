@@ -1,3 +1,4 @@
+import Carousel from "./carousel"
 
 import Navbar from "./Components/Navbar"
 
@@ -5,8 +6,11 @@ import Navbar from "./Components/Navbar"
 function App() {
   return (
     <>
-    <div className="pt-20"></div>
     <Navbar/>
+      <div className="flex justify-center items-center">
+        <Carousel/>
+      </div>
+        
     </>
   )
 }

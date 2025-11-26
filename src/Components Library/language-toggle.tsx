@@ -7,7 +7,7 @@ export default function LanguageToggle() {
     <div className="flex flex-col items-center mr-[1.81rem] mt-18">
       {/* Label */}
       <div className="text-center">
-        <p className="font-cinzel text-[0.75rem] uppercase text-[#F2ECDC]">
+        <p className="font-cinzel text-[0.75rem] uppercase text-[#F2ECDC] pb-1 ">
           {isEnabled ? "ENGLISH" : "ICELANDIC"}
         </p>
       </div>
@@ -15,7 +15,7 @@ export default function LanguageToggle() {
       {/* Toggle Switch */}
       <button
         onClick={() => setIsEnabled(!isEnabled)}
-        className="relative w-[3.18rem] h-[1.9rem] rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600 bg-[#5c3d2e]"
+        className="relative w-[3.18rem] h-[1.9rem] font-[quicksand] rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600 bg-[#5c3d2e]"
         aria-label="Language toggle"
         aria-pressed={isEnabled}
       >

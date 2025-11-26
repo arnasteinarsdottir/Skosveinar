@@ -1,11 +1,11 @@
 
+import Navbar from "./Components/Navbar.tsx";
+
 
 function App() {
   return (
     <>
-      <div className="bg-background">
-          <p className="text-red-400">Landing page</p>
-      </div>
+        <Navbar/>
     </>
   )
 }

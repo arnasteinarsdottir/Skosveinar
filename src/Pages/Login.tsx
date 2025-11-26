@@ -1,0 +1,51 @@
+
+function LoginPage() {
+  return (
+    < >
+    {/* Login Page */}
+<div className="bg-background w-full h-screen flex flex-col items-center justify-center ">
+     {/* Logo */}
+    <img className="mb-[3.69rem]" src="#" alt="Logo" />
+     {/* User name, password, email */}
+<div className="flex flex-col items-center justify-center gap-[1.31rem]">
+  <div className="flex w-[20rem] h-12 border border-darkgreen rounded-[10px] items-center gap-3 px-3">
+    <img src="src/Pictures/profileicon.svg" alt="Profile Icon"/>
+    <input
+      type="text"
+      placeholder="Sláðu inn notandanafn"
+      className="font-[Quicksand] flex-1 text-darkgreen text-[0.75rem] bg-transparent focus:outline-none"
+    />
+  </div>
+  <div className="flex w-[20rem] h-12 border border-darkgreen rounded-[10px] items-center gap-3 px-3">
+    <img src="src/Pictures/email-icon.svg" alt="Email Icon"/>
+    <input type="email" placeholder="Sláðu inn netfang"
+      className="font-[Quicksand] flex-1 text-darkgreen text-[0.75rem] bg-transparent focus:outline-none"
+    />
+  </div>
+
+  <div className="flex w-[20rem] h-12 border border-darkgreen rounded-[10px] items-center gap-3 px-3">
+    <img src="src/Pictures/password-icon.svg" alt="Password Icon"/>
+    <input type="password" placeholder="Sláðu inn lykilorð" className=" font-[Quicksand] flex-1 text-darkgreen text-[0.75rem] bg-transparent focus:outline-none"
+    />
+  </div>
+
+</div>
+<div className="mt-10">
+    <button className=" font-[Quicksand] font-bold w-56 h-11 bg-darkbrown rounded-[10px] text-white text-[0.75rem]">Innskráning</button>
+    </div>
+<div className="flex flex-col items-center justify-center gap-[1.31rem] mt-10 ">
+          <div className="flex w-[20rem] h-12 border border-darkgreen rounded-[10px] items-center  gap-3 px-3">
+             <img src="src/Pictures/apple-icon.svg" alt="Profile Icon"/>
+             <input type="apple" placeholder="Skráðu þig inn með Apple" className=" font-[Quicksand] flex-1 text-darkgreentext-[0.75rem] bg-transparent focus:outline-none"/>
+        </div>
+              <div className="flex w-[20rem] h-12 border border-darkgreen rounded-[10px] items-center gap-3 px-3">
+             <img src="src/Pictures/google-icon.svg" alt="Profile Icon"/>
+             <input type="google" placeholder="Skráðu þig inn með Google" className="font-[Quicksand] flex-1 text-darkgreentext-[0.75rem] bg-transparent focus:outline-none"/>
+        </div>
+   </div>     
+</div>
+    </>
+  )
+}
+
+export default LoginPage

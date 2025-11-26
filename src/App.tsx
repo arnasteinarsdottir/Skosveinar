@@ -1,6 +1,6 @@
 import Carousel from "./carousel"
 
-import Navbar from "./Components/Navbar.tsx";
+import Navbar from "./Components/Navbar"
 
 
 function App() {

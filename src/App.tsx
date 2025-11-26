@@ -3,8 +3,8 @@
 function App() {
   return (
     <>
-      <div className="bg-blue-500">
-          <p className="text-red-400">Halló</p>
+      <div className="bg-background">
+          <p className="text-red-400">Landing page</p>
       </div>
     </>
   )

@@ -24,6 +24,18 @@ A brief description of what this project does and who it’s for.
 - **TypeScript**
 - **React**
 - **Tailwind CSS**
+- 
+## 4. Installation
+
+To access the project, simply scan the QR code provided in our group project presentation using your mobile device.  
+A direct link to the deployed website is also included in the presentation for easy access on desktop.
+
+
+
+## 5. Usage
+
+After opening the website through the QR code or the provided link, you can browse gift ideas, filter by categories (age, type of gift, etc.), and create individual wishlists for each child.  
+You can also view a separate overview list that organizes all 13 days and displays the total cost of all gifts for each child.
 
 
 ##Project Status

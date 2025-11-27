@@ -7,8 +7,8 @@ A brief description of what this project does and who it’s for.
 ## Features
 - Carusle with all the santa clauses and what their feature 
 - A gift wishlist where you can create and organize separate lists for each child.
--The ability to search for gifts within our website, using filters such as age, gift type, and other categories.
--A separate list that organizes each day, including the total cost for all days and all gifts for a specific child.
+- The ability to search for gifts within our website, using filters such as age, gift type, and other categories.
+- A separate list that organizes each day, including the total cost for all days and all gifts for a specific child.
 
 
 ##Libraries used: 

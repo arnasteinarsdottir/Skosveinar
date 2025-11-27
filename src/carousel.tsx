@@ -66,27 +66,27 @@ const Carousel = () => {
     console.log((currentIndex +2) % totalImages)
     return (
         <div>
-            <div className='flex gap-2 mt-8 w-[672px] overflow-x-hidden overflow-y-visible pt-8'>
+            <div className='grid grid-rows-8 grid-cols-7 gap-2 mt-8 w-[672px] overflow-x-hidden overflow-y-visible pt-8'>
                 
                 {/* Outside left */}
                 <img 
                     src={images[getImageIndex(-3)]}
                     alt={`Jólasveinn ${currentIndex + 1}`}
-                    className={`w-[80px] h-[80px] brightness-60 ml-[-88px] ${isMovingLeft && "transition-all duration-400 ease-in-out ml-[-236px]"} ${isMovingRight && "transition-all duration-400 ease-in-out ml-[0px]"}`}
+                    className={`row-span-7 w-[80px] h-[80px] brightness-60 ml-[-88px] ${isMovingLeft && "transition-all duration-400 ease-in-out ml-[-236px]"} ${isMovingRight && "transition-all duration-400 ease-in-out ml-[0px]"}`}
                 />
 
                 {/* Small left */}
                     <img 
                         src={images[getImageIndex(-2)]}
                         alt={`Jólasveinn ${currentIndex + 1}`}
-                        className={`w-[80px] h-[80px] brightness-60 ${isMovingRight && "transition-all duration-400 ease-in-out brightness-80 scale-175 origin-top-left"}`}
+                        className={`row-span-7 w-[80px] h-[80px] brightness-60 ${isMovingRight && "transition-all duration-400 ease-in-out brightness-80 scale-175 origin-top-left"}`}
                     />
 
                 {/* Medium left */}
                     <img 
                         src={images[getImageIndex(-1)]}
                         alt={`Jólasveinn ${currentIndex + 1}`}
-                        className={`w-[140px] h-[140px] brightness-80 ${isMovingLeft && "transition-all duration-400 ease-in-out brightness-[60%] scale-57 origin-top-right"} ${isMovingRight && "transition-all duration-400 ease-in-out ml-[60px] brightness-100 scale-143 origin-top-left"}`}
+                        className={`row-span-7 w-[140px] h-[140px] brightness-80 ${isMovingLeft && "transition-all duration-400 ease-in-out brightness-[60%] scale-57 origin-top-right"} ${isMovingRight && "transition-all duration-400 ease-in-out ml-[60px] brightness-100 scale-143 origin-top-left"}`}
                     />
 
                 {/* Large center */}
@@ -94,30 +94,38 @@ const Carousel = () => {
                     <img 
                         src={images[currentIndex]}
                         alt={`Jólasveinn ${currentIndex + 1}`} 
-                        className={`w-[200px] h-[200px] ${isMovingLeft && "transition-all duration-400 ease-in-out brightness-80 scale-70 origin-top-left"} ${isMovingRight && "transition-all duration-400 ease-in-out brightness-80 scale-70 origin-top-right"}`}
+                        className={`row-span-7 w-[200px] h-[200px] ${isMovingLeft && "transition-all duration-400 ease-in-out brightness-80 scale-70 origin-top-left"} ${isMovingRight && "transition-all duration-400 ease-in-out brightness-80 scale-70 origin-top-right"}`}
                     />
+                    
+                    
 
                 {/* Medium right */}
                     <img 
                         src={images[getImageIndex(+1)]}
                         alt={`Jólasveinn ${currentIndex + 1}`}
-                        className={`w-[140px] h-[140px] brightness-80 ${isMovingLeft && "transition-all duration-400 ease-in-out brightness-100 scale-143 origin-top-right"} ${isMovingRight && "transition-all duration-400 ease-in-out brightness-[60%] scale-57 origin-top-left"}`}
+                        className={`row-span-7 w-[140px] h-[140px] brightness-80 ${isMovingLeft && "transition-all duration-400 ease-in-out brightness-100 scale-143 origin-top-right"} ${isMovingRight && "transition-all duration-400 ease-in-out brightness-[60%] scale-57 origin-top-left"}`}
                     />
 
                 {/* Small right */}
                     <img 
                         src={images[getImageIndex(+2)]}
                         alt={`Jólasveinn ${currentIndex + 1}`} 
-                        className={`w-[80px] h-[80px] brightness-60 ${isMovingLeft && "transition-all duration-400 ease-in-out brightness-80 scale-175 origin-top-left"}`}
+                        className={`row-span-7 w-[80px] h-[80px] brightness-60 ${isMovingLeft && "transition-all duration-400 ease-in-out brightness-80 scale-175 origin-top-left"}`}
                     />
 
                 {/* Outside right */}
                     <img 
                         src={images[getImageIndex(+3)]}
                         alt={`Jólasveinn ${currentIndex + 1}`}
-                        className='w-[80px] h-[80px] ml-[60px] brightness-60'
+                        className='row-span-7 w-[80px] h-[80px] ml-[60px] brightness-60'
                     />
-
+                <p>Stekkjastaur</p>
+                <p>Stekkjastaur</p>
+                <p>Stekkjastaur</p>
+                <p>Stekkjastaur</p>
+                <p>Stekkjastaur</p>
+                <p>Stekkjastaur</p>
+                <p>Stekkjastaur</p>
             </div>
             <div className='flex justify-center gap-20 mb-4'>
                 <button 

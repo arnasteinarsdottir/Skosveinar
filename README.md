@@ -12,8 +12,8 @@ A brief description of what this project does and who it’s for.
 
 
 ##Libraries used: 
--Shadcn
--v0
+-**Shadcn**
+-**v0**
 
 
 

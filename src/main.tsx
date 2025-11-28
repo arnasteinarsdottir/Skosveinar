@@ -4,14 +4,14 @@ import App from './App.tsx'
 import "./main.css"
 import { BrowserRouter, Routes, Route } from "react-router";
 
-import Search from "./Components/SearchWithFilter.tsx";
+import Leita from "./Pages/Leita.tsx";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/SearchWithFilter" element={<Search />} />
+        <Route path="/Leita" element={<Leita />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

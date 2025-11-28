@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Mikki",
+    "gifts": [
+      { "id": 1, "date": "12. DES", "gift": "Lego sett", "price": 5000 }
+    ]
+  },
+  {
+    "name": "Kalli",
+    "gifts": [
+      { "id": 2, "date": "15. DES", "gift": "Bók", "price": 3000 }
+    ]
+  },
+  {
+    "name": "Mína",
+    "gifts": [
+      { "id": 3, "date": "20. DES", "gift": "Föt", "price": 4000 }
+    ]
+  }
+]

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/Components/ui/button";
 import type { Product } from "./SearchWithFilter";
 
+
 interface SearchResultsProps {
   results: Product[];
 }
@@ -23,8 +24,7 @@ export function SearchResults({ results }: SearchResultsProps) {
           <svg
             viewBox="0 0 280 340"
             preserveAspectRatio="none"
-            className="pointer-events-none absolute inset-0 w-full h-full"
-            style={{ width: "100%", height: "100%" }}
+            className="pointer-events-none absolute inset-0 w-full h-full w-100% h-100%"
           >
             <defs>
               <filter id="brush-border">
@@ -51,7 +51,7 @@ export function SearchResults({ results }: SearchResultsProps) {
               height={328}
               style={{
                 fill: "none",
-                stroke: "#4E2513",
+                stroke: "#1F3D3B",
                 strokeWidth: 4,
                 strokeLinecap: "round",
                 filter: "url(#brush-border)",
@@ -64,7 +64,7 @@ export function SearchResults({ results }: SearchResultsProps) {
               height={328}
               style={{
                 fill: "none",
-                stroke: "#4E2513",
+                stroke: "#1F3D3B",
                 strokeWidth: 1,
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
@@ -76,16 +76,16 @@ export function SearchResults({ results }: SearchResultsProps) {
           <img
             src={item.image}
             alt={item.title}
-            className="w-full h-32 object-cover rounded"
+            className="w-full h-32 object-cover rounded mb-4"
           />
-          <h4 className="text-sm font-quicksand mt-2">{item.title}</h4>
-          <h4 className="text-xs font-quicksand text-[#7C2A1A] ">{item.price} kr</h4>
+          <h4 className="text-sm font-bold font-quicksand mt-2">{item.title}</h4>
+          <h4 className="text-xs font-bold font-quicksand text-darkred">{item.price} kr</h4>
           <h5>
-            <a href={item.link} className="text-sm font-quicksand text-[#1F3D3B]">
+            <a href={item.link} className="text-sm font-quicksand text-darkgreen">
               {item.store}
             </a>
           </h5>
-          <Button size="sm" className="mt-2 w-full font-quicksand bg-[#1F3D3B]">
+          <Button size="sm" className="mt-2 w-full font-bold font-quicksand bg-darkgreen text-white hover:bg-darkergreen cursor-pointer">
             Óska
           </Button>
         </motion.div>

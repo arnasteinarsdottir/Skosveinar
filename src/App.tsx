@@ -1,12 +1,16 @@
+import Carousel from "./carousel"
 
-import Navbar from "./Components/Navbar.tsx";
+import Navbar from "./Components/Navbar"
 
 
 function App() {
   return (
     <>
-        <Navbar/>
-     
+    <Navbar/>
+      <div className="flex justify-center items-center">
+        <Carousel/>
+      </div>
+        
     </>
   )
 }

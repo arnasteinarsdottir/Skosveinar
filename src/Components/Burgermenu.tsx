@@ -4,7 +4,6 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../Components Library/ui/dropdown-menu"
 import { Button } from "../Components Library/ui/button"
@@ -15,6 +14,7 @@ export function BurgerMenu() {
 
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
+      
       {/* Trigger */}
       <DropdownMenuTrigger asChild>
         <img
@@ -27,15 +27,15 @@ export function BurgerMenu() {
       {/* Menu */}
       <DropdownMenuContent
         className="
-          flex
-          flex-col
-          w-63
-          h-130
-          bg-[#4E2513]
+          md:hidden
+          flex flex-col
+          w-screen h-screen
+          bg-darkbrown
+          border-0 shadow-none rounded-none
         "
       >
-        {/*  X BUTTON */}
-        <DropdownMenuLabel className="flex justify-end pr-4 pt-2">
+        {/* X button */}
+        <DropdownMenuLabel className="flex justify-end pr-4 pt-[1.69rem] pb-24">
           <img
             src="src/Pictures/Veggieburger.svg"
             alt="close menu"
@@ -44,69 +44,64 @@ export function BurgerMenu() {
           />
         </DropdownMenuLabel>
 
-        <DropdownMenuSeparator />
-
-        {/* MENU ITEMS — reordered so Um hefðina is top, LEITA last */}
+        {/* Menu items */}
         <div>
-          <DropdownMenuItem className="flex justify-end mr-[2.94rem] font-cinzel text-[18px] uppercase text-[#F2ECDC]">
-            <img
-              src="src/Pictures/haticon.svg"
-              alt="menu icon"
-              className="flex"
-            />
-            Um hefðina
+          <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
+            <img src="src/Pictures/searchicon.svg" alt="menu icon" />
+            Leita
           </DropdownMenuItem>
 
-          <DropdownMenuItem className="flex justify-end mr-[1.81rem] font-cinzel text-[18px] uppercase text-[#F2ECDC]">
-            <img
-              src="src/Pictures/staricon.svg"
-              alt="menu icon"
-              className="flex"
-            />
+          <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
+            <img src="src/Pictures/staricon.svg" alt="menu icon" />
             Skipuleggja
           </DropdownMenuItem>
 
-          <DropdownMenuItem className="flex justify-end mr-[1.81rem] font-cinzel text-[18px] uppercase text-[#F2ECDC]">
-            <img
-              src="src/Pictures/shoeicon.svg"
-              alt="menu icon"
-              className="flex"
-            />
+          <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
+            <img src="src/Pictures/shoeicon.svg" alt="menu icon" />
             Óskalisti
           </DropdownMenuItem>
 
-          <DropdownMenuItem className="flex justify-end mr-[1.81rem] font-cinzel text-[18px] uppercase text-[#F2ECDC]">
-            <img
-              src="src/Pictures/searchicon.svg"
-              alt="menu icon"
-              className="flex"
-            />
-            LEITA
+          <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
+            <img src="src/Pictures/hat-icon.svg" alt="menu icon" />
+            Um hefðina
           </DropdownMenuItem>
         </div>
 
+        {/* Language toggle */}
         <div className="flex justify-end">
           <LanguageToggle />
         </div>
 
+        {/* Login button */}
         <div className="flex justify-center mt-19">
-          {/* Button */}
           <Button
-            variant="outline"
+            variant="ghost"
             className="
               flex
-              font-cinzel
+              font-quicksand
               text-[18px]
-              uppercase
-              text-[#F2ECDC]
-              w-39
-              h-2.25rem
+              text-background
+              w-56
+              font-bold
+              h-[3.38rem]
+              bg-transparent
+              border
             "
           >
             <a href="#">Innskráning</a>
           </Button>
         </div>
+
+        {/* Signup text */}
+        <div className="flex flex-col items-center justify-center  font-medium mt-6 gap-2 text-background font-[quicksand]">
+          <p>Áttu ekki aðgang?</p>
+          <a href="#">
+            <p>Nýskráning</p>
+          </a>
+        </div>
       </DropdownMenuContent>
     </DropdownMenu>
   )
 }
+
+

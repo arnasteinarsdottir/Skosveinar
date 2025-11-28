@@ -65,7 +65,7 @@ export default function SearchWithFilter() {
   );
   const [results, setResults] = useState<Product[]>([]);
 
-  // только сохраняем в localStorage — тут нет setState => ESLint счастлив
+  // Save filters to localStorage whenever they change 
   useEffect(() => {
     localStorage.setItem(
       "filters",
@@ -124,24 +124,25 @@ export default function SearchWithFilter() {
   };
 
   return (
-    <div className="py-4 space-y-4 bg-[#F2ECDC] min-h-screen mx-auto flex flex-col items-center min-w-[430px] max-[430px]:px-[35px]">
+    <div className="py-4 space-y-4 bg-background min-h-screen mx-auto flex flex-col items-center min-w-[430px] max-[430px]:px-[35px]">
      
-      <div className="flex flex-row items-start mt-8 gap-0">
+      <div className="flex flex-row items-start mt-30 gap-0">
         <img
           src="src/Pictures/gryla1.png"
           className="w-[150px] h-[100px]"
           alt="Gryla"
         />
-        <h4 className="font-cinzel text-[19px] text-[#1F3D3B] mt-0">
-          Viltu leita að skó­gjöfum?
+        <h4 className="font-cinzel text-[20px] text-darkgreen mt-0">
+          Leita að skó­gjöfum
         </h4>
       </div>
 
       {/* search bar + filter button */}
-      <div className="flex items-center gap-3.5 mt-6 mb-1">
+      <div className="flex items-center gap-3.5 mt-2 mb-4">
         <div className="relative w-[310px]">
           <Input
-            className="flex justify-between font-quicksand items-center w-[310px] py-2.5 rounded-[5px] border border-[#4E2513] bg-[#ecebea]"
+            className="flex justify-between font-quicksand items-center w-[310px] py-2.5 rounded-[5px] border border-darkbrown bg-bgsecondary focus:outline-none focus:bg-lightbackground focus-visible:outline-none focus-visible:ring-[0,5px]
+ focus:ring-darkgreen "
             placeholder="Leita"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -158,7 +159,7 @@ export default function SearchWithFilter() {
         <Button
           variant="outline"
           size="icon"
-          className="bg-[#F2ECDC] border-[#4E2513]"
+          className="bg-background border-darkbrown"
           onClick={toggleFilter}
         >
           {showFilter ? (
@@ -177,21 +178,21 @@ export default function SearchWithFilter() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="w-[360px] space-y-4 border rounded-md p-4 bg-muted/50 overflow-hidden"
+            className="w-[360px] space-y-4 border bg-lightbackground rounded-md p-4 bg-muted/50 overflow-hidden"
           >
             <div className="flex flex-row gap-20">
               {/* categories */}
               <div>
-                <p className="text-[16px] font-quicksand text-[#1F3D3B] font-medium mb-2">
+                <p className="text-[16px] font-quicksand text-darkgreen font-medium mb-2">
                   Flokkur
                 </p>
                 {categories.map((cat) => (
                   <label
                     key={cat}
-                    className="flex text-[12px] items-center gap-2 mb-1"
+                    className="flex text-[12px] font-quicksand items-center gap-2 mb-1"
                   >
                     <Checkbox
-                      className="bg-[#ecebea] border-[#1F3D3B]"
+                      className="bg-white border-darkgreen"
                       checked={selectedCategories.includes(cat)}
                       onCheckedChange={(checked) =>
                         setSelectedCategories((prev) =>
@@ -208,7 +209,7 @@ export default function SearchWithFilter() {
 
               {/* stores */}
               <div>
-                <p className="text-[16px] font-quicksand text-[#1F3D3B] font-medium mb-1">
+                <p className="text-[16px] font-quicksand text-darkgreen font-medium mb-1">
                   Verslanir
                 </p>
                 {stores.map((store) => (
@@ -217,7 +218,7 @@ export default function SearchWithFilter() {
                     className="flex text-[12px] font-quicksand items-center gap-2 mb-1"
                   >
                     <Checkbox
-                      className="bg-[#ecebea] border-[#1F3D3B]"
+                      className="bg-white border-darkgreen"
                       checked={selectedStores.includes(store)}
                       onCheckedChange={(checked) =>
                         setSelectedStores((prev) =>
@@ -235,22 +236,24 @@ export default function SearchWithFilter() {
 
             {/* price */}
             <div>
-              <p className="text-[16px] font-quicksand text-[#1F3D3B] font-medium mb-2">
+              <p className="text-[16px] font-quicksand text-darkgreen font-medium mb-2">
                 Verð
               </p>
               <Slider
+                className="h-0.5 bg-darkgreen "   
                 defaultValue={priceRange}
                 min={0}
                 max={5000}
                 step={100}
                 onValueChange={(val) => setPriceRange(val as [number, number])}
+                
               />
-              <div className="text-[12px] font-quicksand mt-2 ">
+              <div className="text-[12px] font-quicksand mt-2 text-darkgreen ">
                 {priceRange[0]} kr – {priceRange[1]} kr
               </div>
             </div>
 
-            <Button className="w-full mt-0 font-quicksand bg-[#1F3D3B]" onClick={handleSearch}>
+            <Button className="w-full mt-0 text-white font-bold font-quicksand bg-darkgreen cursor-pointer" onClick={handleSearch}>
               Leita
             </Button>
           </motion.div>

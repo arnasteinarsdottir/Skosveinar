@@ -1,12 +1,11 @@
-import GiftOverviewBox from "./Components/GiftOverviewBox";
-import TotalPriceCalculator from "./Components/TotalPriceCalculator";
-import FancyDropdown from "./Components/FancyDropdown";
-import BrownFilledButton from "./Components/BrownFilledButton";
-import AddChildModal from "./Components/AddChildModal";
+import GiftOverviewBox from "../Components/GiftOverviewBox";
+import TotalPriceCalculator from "../Components/TotalPriceCalculator";
+import FancyDropdown from "../Components/FancyDropdown";
+import AddChildModal from "../Components/AddChildModal";
+import Navbar from "@/Components/Navbar";
 
 
 function ProfilePage() {
-
      const GetFromLocalStorage = () => {
       let trueData: any[] = []
       const storedJsonString = localStorage.getItem("data")
@@ -35,6 +34,8 @@ function ProfilePage() {
   return (
     <>
       <div className=" flex flex-col items-center">
+        <Navbar />
+      <div className="pt-20"></div>
         <div className="flex justify-between items-center w-98 mt-14">
           <FancyDropdown />
         </div>

@@ -1,9 +1,12 @@
-import OrganizingInput from "./Components/OrganizingInput";
-import SantaCard from "./Components/SantaCard";
+import OrganizingInput from "../Components/OrganizingInput";
+import SantaCard from "../Components/SantaCard";
+import Navbar from "@/Components/Navbar";
 
 function Organize () {
     return (
         <>
+        <Navbar/>
+                <div className="pt-20"></div>
             <div className="flex flex-col items-center mt-14">
                 <div className="flex flex-col items-start md:items-center">
                     <p className="font-cinzel text-2xl text-darkbrown">

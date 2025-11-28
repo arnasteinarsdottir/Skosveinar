@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function LoginPage() {
   return (
@@ -31,7 +32,9 @@ function LoginPage() {
 
 </div>
 <div className="mt-10">
-    <button className=" font-[Quicksand] font-bold w-56 h-11 bg-darkbrown rounded-[10px] text-white text-[0.75rem]">Innskráning</button>
+    <button className=" font-[Quicksand] font-bold w-56 h-11 bg-darkbrown rounded-[10px] text-white text-[0.75rem]">
+      <Link to="/profilepage"> Innskráning </Link>
+    </button>
     </div>
 <div className="flex flex-col items-center justify-center gap-[1.31rem] mt-10 ">
           <div className="flex w-[20rem] h-12 border border-darkgreen rounded-[10px] items-center  gap-3 px-3">

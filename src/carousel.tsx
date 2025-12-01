@@ -79,7 +79,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className='min-w-[356px] mt-12'>
+        <div className='min-w-[356px]'>
             <div className='flex items-start gap-2 w-[356px] md:w-[672px] pt-8 overflow-hidden'>
                 
                 {/* Outside left */}

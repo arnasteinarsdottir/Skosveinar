@@ -115,6 +115,7 @@ function Organize () {
                             <div className="pb-6 md:pb-0">
                                 <SantaCard 
                                     date = {dateSelected}
+                                    santanumber = {dateOptions.indexOf(dateSelected)}
                                 />
                             </div>
                             <OrganizingInput setToLocalStorage={setToLocalStorage} inputGiftIdeas = {inputGiftIdeas} inputGiftPrice = {inputGiftPrice} updateGiftIdeas = {updateGiftIdeas} updateGiftPrice = {updateGiftPrice}  />

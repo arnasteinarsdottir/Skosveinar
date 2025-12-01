@@ -50,7 +50,7 @@ function Organize () {
     const setToLocalStorage = () => {
         const getChildName = localStorage.getItem("children") || "[]";
         const arrayOfChildren = JSON.parse(getChildName);
-        const changedArray = arrayOfChildren.map ((child) => {
+        const changedArray = arrayOfChildren.map ((child: any) => {
             if (child.name === nameSelected) {
                 return (
                     {
@@ -98,8 +98,8 @@ function Organize () {
 
     const dateOptions = ["12. des", "13. des", "14. des", "15. des", "16. des", "17. des", "18. des", "19. des", "20. des", "21. des", "22. des", "23. des", "24. des"]
 
-    const childrenSTR = localStorage.getItem("children");
-    const options = JSON.parse(childrenSTR)?.map((child) => {
+    const childrenSTR = localStorage.getItem("children") || "[]";
+    const options = JSON.parse(childrenSTR)?.map((child: { name: string }) => {
         return (
             child.name
         )

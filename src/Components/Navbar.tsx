@@ -17,7 +17,7 @@ export default function Navbar() {
       {/* Logo */}
 <Link to="/ProfilePage">
   <img
-    src="src/Pictures/logo.svg"
+src="src/Pictures/logo-skosveinar.svg"
     alt="Logo"
     className="w-12 h-12"
   />
@@ -33,7 +33,7 @@ export default function Navbar() {
         items-center
         mr-10
       ">
-        <a className="flex flex-col items-center " href="#">
+        <a className="flex flex-col items-center " href="/search">
           <img src="src/Pictures/searchicon.svg" />
           Leita
         </a>
@@ -41,7 +41,7 @@ export default function Navbar() {
           <img src="src/Pictures/shoeicon.svg" />
          Skipuleggja
         </a>
-           <a className="flex flex-col items-center " href="#">
+           <a className="flex flex-col items-center " href="/wishlist">
           <img src="src/Pictures/staricon.svg" />
          Óskalisti
         </a>
@@ -59,3 +59,4 @@ export default function Navbar() {
     </nav>
   );
 }
+    

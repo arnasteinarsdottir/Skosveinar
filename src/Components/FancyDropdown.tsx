@@ -1,7 +1,7 @@
 import ArrowDownIcon from "../Pictures/arrow-down-icon.svg";
 import { useState } from "react";
 type Props = {
-    selectOption: () => void,
+    selectOption: (option:string) => void,
     optionSelected: string,
     options: string []
 }

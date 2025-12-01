@@ -17,7 +17,7 @@ function ProfilePage() {
       }
 
       const childrenSTR = localStorage.getItem("children");
-      const options = JSON.parse(childrenSTR)?.map((child) => {
+      const options = JSON.parse(childrenSTR ?? "[]")?.map((child: { name: string }) => {
         return (
             child.name
         )

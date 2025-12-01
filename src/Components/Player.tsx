@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Player() {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -96,8 +97,9 @@ function Player() {
           Jólasveinarnir er byrjaður að safna gjafa hugmyndum
         </h2>
         <button className="h-12 w-[clamp(295px,60vw,519px)] text-background bg-darkgreen font-quicksand font-bold rounded-2xl">
-          Búa til aðgang
-        </button>
+  <Link to="/login">Búa til aðgang</Link>
+</button>
+
       </div>
     </div>
   );

@@ -1,4 +1,6 @@
 import { BurgerMenu } from "../Components/Burgermenu.tsx";
+import { Link } from "react-router-dom";
+
 
 export default function Navbar() {
   return (
@@ -8,16 +10,18 @@ export default function Navbar() {
       bg-darkbrown
       flex items-center justify-between 
       px-4 
-       mx-auto md:max-w-full
+      mx-auto 
+      md:max-w-full
     ">
       
       {/* Logo */}
-      <img 
-        src="src/Pictures/logo.svg" 
-        alt="Logo" 
-        className="w-12 h-12" 
-      />
-
+<Link to="/ProfilePage">
+  <img
+    src="src/Pictures/logo.svg"
+    alt="Logo"
+    className="w-12 h-12"
+  />
+</Link>
       {/* Desktop navigation */}
       <div className="
         hidden md:flex 
@@ -33,7 +37,7 @@ export default function Navbar() {
           <img src="src/Pictures/searchicon.svg" />
           Leita
         </a>
-        <a className="flex flex-col items-center mt-1" href="#">
+        <a className="flex flex-col items-center mt-1" href="/Organize">
           <img src="src/Pictures/shoeicon.svg" />
          Skipuleggja
         </a>
@@ -41,7 +45,7 @@ export default function Navbar() {
           <img src="src/Pictures/staricon.svg" />
          Óskalisti
         </a>
-        <a className="flex flex-col items-center " href="#">
+        <a className="flex flex-col items-center " href="/AboutTradition">
           <img src="src/Pictures/hat-icon.svg" />
           Um hefðina
         </a>
@@ -51,7 +55,7 @@ export default function Navbar() {
       <div className="md:hidden">
         <BurgerMenu />
       </div>
-
+    
     </nav>
   );
 }

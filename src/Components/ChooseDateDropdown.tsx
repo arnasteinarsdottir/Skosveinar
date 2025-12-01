@@ -1,4 +1,4 @@
-import { PiCaretDown } from "react-icons/pi";
+import  CaretDownDuotone  from "@phosphor-icons/core/duotone/caret-down-duotone.svg";
 import { useState } from "react";
 
 type Props = {
@@ -27,7 +27,7 @@ const ChooseDateDropdown = ({ dropdownDates }: Props) => {
                     <div 
                         onClick={() => setIsDropdownVisible(v => !v)}
                         className="border border-darkbrown px-3 py-2 rounded h-8 w-68 flex items-center text-darkbrown shadow-xl justify-between">
-                            Veldu dag <PiCaretDown />
+                            Veldu dag <img src={CaretDownDuotone} />
                     </div>
                     {isDropdownVisible && dateDropdownContent}
                 </div>

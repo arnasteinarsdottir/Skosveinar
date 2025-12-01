@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import "./main.css"
-import Leita from "./Pages/Search.tsx";
+import Search from "./Pages/Search.tsx"
 import WishList from "./Pages/WishList.tsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />} />
 
-        <Route path="/Leita" element={<Leita />} />
+        <Route path="/Search" element={<Search />} />
         <Route path="/profile" element={<ProfilePage />} />
          <Route path="/AboutTradition" element={<AboutTradition />} />
         <Route path="/login" element={<LoginPage />} />

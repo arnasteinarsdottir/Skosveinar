@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import "./main.css"
 import Leita from "./Pages/Leita.tsx";
+import WishList from "./Pages/WishList.tsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProfilePage from "./ProfilePage.tsx"
@@ -17,6 +18,8 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/Leita" element={<Leita />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/organize" element={<Organize />} />
+        <Route path="/wishlist" element={<WishList />} />
+
 
       </Routes>
     </BrowserRouter>

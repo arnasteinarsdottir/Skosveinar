@@ -13,11 +13,13 @@ function GiftOverviewBox({date, gift, price}: Props) {
         <div className="flex items-center px-6 pt-6">
           <div className="w-6"></div>
           <p className="text-background font-cinzel text-3xl mx-auto">{date}</p>
-          <img 
+          <a href="organize">
+            <img 
               src={EditIcon} 
               alt="Edit icon"
               className="w-6 h-6"
-          />
+            />
+          </a>
         </div>
         <div className="pl-6 pt-6 pb-6 flex items-center gap-3">
           <div 

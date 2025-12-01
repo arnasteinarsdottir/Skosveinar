@@ -10,7 +10,7 @@ function App() {
       <div className="flex justify-center items-center">
         <Carousel/>
       </div>
-        
+      
     </>
   )
 }

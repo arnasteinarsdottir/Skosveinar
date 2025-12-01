@@ -19,7 +19,7 @@ export function BurgerMenu() {
       {/* Trigger */}
       <DropdownMenuTrigger asChild>
         <img
-          src="src/Pictures/christmasburger.svg"
+          src="src/Pictures/hamburger-menu.svg"
           alt="menu icon"
           onClick={() => setOpen(true)}
         />
@@ -32,7 +32,9 @@ export function BurgerMenu() {
           flex flex-col
           w-screen h-screen
           bg-darkbrown
-          border-0 shadow-none rounded-none
+          border-0 
+          shadow-none 
+          rounded-none
         "
       >
         {/* X button */}
@@ -95,7 +97,7 @@ export function BurgerMenu() {
               border
             "
           >
-            <a href="#">Innskráning</a>
+            <a href="/login">Innskráning</a>
           </Button>
         </div>
 

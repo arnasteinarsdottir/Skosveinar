@@ -1,19 +1,15 @@
 import ArrowDownIcon from "../Pictures/arrow-down-icon.svg";
 import { useState } from "react";
+type Props = {
+    selectOption: () => void,
+    optionSelected: string,
+    options: string []
+}
 
 
-function FancyDropdown () {
+function FancyDropdown ({selectOption, optionSelected, options}: Props) {
     // Is the dropdown menu open or closed?
     const [isOpen, setIsOpen] = useState(false);
-
-    // Which name is currently selected?
-    const [nameSelected, setNameSelected] = useState("Veldu barn");
-
-    const selectChild = (name: string) => {
-        setNameSelected(name)
-    }
-
-    const options = ["Mikki", "Mína", "Kalli", "Kata"];
 
     const openCloseDropdown = () => {
         setIsOpen(!isOpen);
@@ -25,21 +21,21 @@ function FancyDropdown () {
                 <button
                     onClick={openCloseDropdown}
                 >
-                    <span className="font-cinzel text-4xl text-darkbrown">{isOpen? "Veldu barn" : nameSelected}</span>
-                    <div className="flex flex-col">
+                    <span className="font-cinzel text-4xl text-darkbrown">{isOpen? "Veldu barn" : optionSelected}</span>
+                    <div className="flex flex-col absolute left-1 mt-1 w-56 text-left bg-background">
                         {isOpen?
                             <>
                                 {options.map((option) => {
                                     return (
                                         <span 
-                                        onClick = {() => selectChild(option)}
-                                        className="font-cinzel text-4xl text-darkbrown">{option}</span>
+                                        onClick = {() => selectOption(option)}
+                                        className="block px-0 py-1 text-left font-cinzel text-4xl text-darkbrown">{option}</span>
                                     )
                                 })}
                             </>
                         : ""}
                     </div>
-                    <img src="" alt="" />
+                    <img src={ArrowDownIcon} alt="" />
                 </button>
             </div>
         </>

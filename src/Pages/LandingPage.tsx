@@ -11,7 +11,9 @@ function LandingPage() {
     return (
         <>  
         <div className="pt-20">
-        <Carousel/>
+        <div className="flex w-full justify-center">
+            <Carousel/>
+        </div>
         <Navbar/>
         <AboutUs />
         <LogInLandigPage />

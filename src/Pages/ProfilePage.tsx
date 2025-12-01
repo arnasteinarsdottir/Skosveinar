@@ -1,9 +1,8 @@
-<<<<<<< HEAD:src/ProfilePage.tsx
-import GiftOverviewBox from "./Components/GiftOverviewBox";
-import TotalPriceCalculator from "./Components/TotalPriceCalculator";
-import FancyDropdown from "./Components/FancyDropdown";
-import BrownFilledButton from "./Components/BrownFilledButton";
-import AddChildModal from "./Components/AddChildModal";
+import GiftOverviewBox from "../Components/GiftOverviewBox";
+import TotalPriceCalculator from "../Components/TotalPriceCalculator";
+import FancyDropdown from "../Components/FancyDropdown";
+import BrownFilledButton from "../Components/BrownFilledButton";
+import AddChildModal from "../Components/AddChildModal";
 import {useState} from "react"; 
 
 
@@ -24,16 +23,6 @@ function ProfilePage() {
         )
       });
 
-=======
-import GiftOverviewBox from "../Components/GiftOverviewBox";
-import TotalPriceCalculator from "../Components/TotalPriceCalculator";
-import FancyDropdown from "../Components/FancyDropdown";
-import AddChildModal from "../Components/AddChildModal";
-import Navbar from "@/Components/Navbar";
-
-
-function ProfilePage() {
->>>>>>> c951ab96059f81f77e52134613a029a42ca07057:src/Pages/ProfilePage.tsx
      const GetFromLocalStorage = () => {
       let trueData: any[] = []
       const storedJsonString = childrenSTR
@@ -72,18 +61,11 @@ function ProfilePage() {
   return (
     <>
       <div className=" flex flex-col items-center">
-<<<<<<< HEAD:src/ProfilePage.tsx
         <div className="flex justify-between items-start w-98 mt-14">
           <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
           <BrownFilledButton 
             onClick = {() => setIsModalOpen(true)}
           />
-=======
-        <Navbar />
-      <div className="pt-20"></div>
-        <div className="flex justify-between items-center w-98 mt-14">
-          <FancyDropdown />
->>>>>>> c951ab96059f81f77e52134613a029a42ca07057:src/Pages/ProfilePage.tsx
         </div>
         <div className="w-98 flex justify-end pt-12 md:flex md:justify-center">
           <TotalPriceCalculator TotalPrice={CalculateTotalPrice()}/>

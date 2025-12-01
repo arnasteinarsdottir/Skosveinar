@@ -33,7 +33,7 @@ src="src/Pictures/logo-skosveinar.svg"
         items-center
         mr-10
       ">
-        <a className="flex flex-col items-center " href="#">
+        <a className="flex flex-col items-center " href="/search">
           <img src="src/Pictures/searchicon.svg" />
           Leita
         </a>
@@ -41,7 +41,7 @@ src="src/Pictures/logo-skosveinar.svg"
           <img src="src/Pictures/shoeicon.svg" />
          Skipuleggja
         </a>
-           <a className="flex flex-col items-center " href="#">
+           <a className="flex flex-col items-center " href="/wishlist">
           <img src="src/Pictures/staricon.svg" />
          Óskalisti
         </a>

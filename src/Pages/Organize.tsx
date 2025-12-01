@@ -1,9 +1,15 @@
+<<<<<<< HEAD:src/Organize.tsx
 import FancyDropdown from "./Components/FancyDropdown";
 import OrganizingInput from "./Components/OrganizingInput";
 import SantaCard from "./Components/SantaCard";
 import Navbar from "./Components/Navbar";
 import ChooseDateDropdown from "./Components/ChooseDateDropdown";
 import { useState } from "react";
+=======
+import OrganizingInput from "../Components/OrganizingInput";
+import SantaCard from "../Components/SantaCard";
+import Navbar from "@/Components/Navbar";
+>>>>>>> c951ab96059f81f77e52134613a029a42ca07057:src/Pages/Organize.tsx
 
 function Organize () {
 
@@ -108,8 +114,13 @@ function Organize () {
     return (
 
         <>
+<<<<<<< HEAD:src/Organize.tsx
             <Navbar />
             <div className="mt-40"></div>
+=======
+        <Navbar/>
+                <div className="pt-20"></div>
+>>>>>>> c951ab96059f81f77e52134613a029a42ca07057:src/Pages/Organize.tsx
             <div className="flex flex-col items-center mt-14">
                 <div className="flex flex-col items-start md:items-center">
                     <p className="font-cinzel text-2xl md:text-4xl text-darkbrown">

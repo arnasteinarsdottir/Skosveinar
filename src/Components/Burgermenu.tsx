@@ -8,6 +8,7 @@ import {
 } from "../Components Library/ui/dropdown-menu"
 import { Button } from "../Components Library/ui/button"
 import LanguageToggle from "../Components Library/language-toggle"
+import { Link } from "react-router-dom"
 
 export function BurgerMenu() {
   const [open, setOpen] = useState(false)
@@ -43,29 +44,35 @@ export function BurgerMenu() {
             onClick={() => setOpen(false)}
           />
         </DropdownMenuLabel>
+<div>
+  <Link to="/search">
+    <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
+      <img src="src/Pictures/searchicon.svg" alt="menu icon" />
+      Leita
+    </DropdownMenuItem>
+  </Link>
 
-        {/* Menu items */}
-        <div>
-          <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
-            <img src="src/Pictures/searchicon.svg" alt="menu icon" />
-            Leita
-          </DropdownMenuItem>
+  <Link to="/organize">
+    <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
+      <img src="src/Pictures/staricon.svg" alt="menu icon" />
+      Skipuleggja
+    </DropdownMenuItem>
+  </Link>
 
-          <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
-            <img src="src/Pictures/staricon.svg" alt="menu icon" />
-            Skipuleggja
-          </DropdownMenuItem>
+  <Link to="/wishlist">
+    <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
+      <img src="src/Pictures/shoeicon.svg" alt="menu icon" />
+      Óskalisti
+    </DropdownMenuItem>
+  </Link>
 
-          <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
-            <img src="src/Pictures/shoeicon.svg" alt="menu icon" />
-            Óskalisti
-          </DropdownMenuItem>
-
-          <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
-            <img src="src/Pictures/hat-icon.svg" alt="menu icon" />
-            Um hefðina
-          </DropdownMenuItem>
-        </div>
+  <Link to="/abouttradition">
+    <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
+      <img src="src/Pictures/hat-icon.svg" alt="menu icon" />
+      Um hefðina
+    </DropdownMenuItem>
+  </Link>
+</div>
 
         {/* Language toggle */}
         <div className="flex justify-end">

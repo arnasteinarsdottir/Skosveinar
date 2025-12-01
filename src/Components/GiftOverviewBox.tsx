@@ -19,7 +19,6 @@ function GiftOverviewBox({date, gift, price}: Props) {
               className="w-6 h-6"
           />
         </div>
-        {/*Imput field area */}
         <div className="pl-6 pt-6 pb-6 flex items-center gap-3">
           <div 
             className="h-12 w-64 bg-background rounded-lg pl-2 text-darkbrown font-quicksand font-bold text-base"

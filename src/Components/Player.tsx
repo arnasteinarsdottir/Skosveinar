@@ -52,7 +52,7 @@ function Player() {
           )}
         </button>
 
-        <button className="bg-[#F4F4F0] w-[265px] h-[61px] absolute left-5 bottom-15">
+        <button className="bg-lightbackground w-[265px] h-[61px] absolute left-5 bottom-15">
           <h1>1. Kafli</h1>
           <p className="text-[16px] font-bold">
             13 nætur til jóla

@@ -6,10 +6,10 @@ export default function Navbar() {
   return (
     <nav className="
       fixed top-0 left-0 right-0 z-50 
-      h-16             
+      h-22           
       bg-darkbrown
       flex items-center justify-between 
-      px-4 
+      px-10
       mx-auto 
       md:max-w-full
     ">

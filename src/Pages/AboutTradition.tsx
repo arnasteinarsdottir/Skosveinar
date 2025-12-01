@@ -8,8 +8,8 @@ function AboutTradition() {
         <>
         <div className="pt-20"></div>
         <Navbar/>
-        <div className="items-center flex justify-items ">
-        <Carousel/>
+         <div className="flex w-full justify-center">
+          <Carousel />
         </div>
         <Player/>
 

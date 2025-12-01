@@ -5,8 +5,10 @@
 @theme {
   --color-darkgreen: #1F3D3B;
   --color-background: #F2ECDC;
+  --color-bgsecondary: #ECEBEA;
   --color-darkbrown: #4E2513;
   --color-darkred: #7C2A1A;
+  --color-lightbackground: #F4F4F0;
   --font-cinzel: "Cinzel", serif;
   --font-quicksand: "Quicksand", sans-serif;
   --font-abhaya-libre: "Abhaya Libre", serif;

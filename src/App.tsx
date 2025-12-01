@@ -1,14 +1,11 @@
-import Carousel from "./carousel"
 
-import Navbar from "./Components/Navbar.tsx";
-
+import LandingPage from "./Pages/LandingPage";
 
 function App() {
   return (
     <>
-    <Navbar/>
-      <div className="flex justify-center items-center">
-        <Carousel/>
+      <div className="#">
+        <LandingPage/>
       </div>
       
     </>

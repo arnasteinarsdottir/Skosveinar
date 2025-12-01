@@ -1,74 +1,43 @@
-# React + TypeScript + Vite
+#Skosveinar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to our group project for Module 4.
+We created this website with parents in Iceland in mind—especially those who struggle to find fun and unique gifts for their children during the season of the 13 Yule Lads. Our goal is to make it easier to discover original ideas, gather them in one place, and keep the overall budget relatively low.
+Additionally, they can read and stay updated on which Santa Claus arrives at what time. 🎄
+A brief description of what this project does and who it’s for.
 
-Currently, two official plugins are available:
+## Features
+- Carusle with all the santa clauses and what their feature 
+- A gift wishlist where you can create and organize separate lists for each child.
+- The ability to search for gifts within our website, using filters such as age, gift type, and other categories.
+- A separate list that organizes each day, including the total cost for all days and all gifts for a specific child.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+##Libraries used: 
+-**Shadcn**
+-**v0**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **HTML**
+- **TypeScript**
+- **React**
+- **Tailwind CSS**
+- 
+## 4. Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+To access the project, simply scan the QR code provided in our group project presentation using your mobile device.  
+A direct link to the deployed website is also included in the presentation for easy access on desktop.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 5. Usage
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# Skosveinar
+After opening the website through the QR code or the provided link, you can browse gift ideas, filter by categories (age, type of gift, etc.), and create individual wishlists for each child.  
+You can also view a separate overview list that organizes all 13 days and displays the total cost of all gifts for each child.
+
+
+##Project Status
+This is an MVP (Minimum Viable Product) developed as part of a school project.
+No license has been added yet.

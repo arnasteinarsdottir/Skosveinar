@@ -5,6 +5,18 @@ import BrownFilledButton from "../Components/BrownFilledButton";
 import AddChildModal from "../Components/AddChildModal";
 import {useState} from "react"; 
 
+type Gift = {
+    [key: string]: {
+        ideas: string;
+        price: number;
+    };
+}
+
+type Child = {
+    name: string;
+    gifts: Gift;
+}
+
 
 function ProfilePage() {
 
@@ -16,17 +28,16 @@ function ProfilePage() {
           setNameSelected(name)
       }
 
-      const childrenSTR = localStorage.getItem("children");
-      const options = JSON.parse(childrenSTR ?? "[]")?.map((child: { name: string }) => {
+      const childrenSTR = localStorage.getItem("children") || "[]";
+      const options = JSON.parse(childrenSTR)?.map((child: Child) => {
         return (
             child.name
         )
       });
-
-     const GetFromLocalStorage = () => {
-      let trueData: any[] = []
+     const GetFromLocalStorage = (): Gift => {
+      let trueData: Child[] = []
       const storedJsonString = childrenSTR
-      if (!storedJsonString) return trueData
+      if (!storedJsonString) return trueData [0].gifts
 
       try {
         const retrievedArrayOfObjects = JSON.parse(storedJsonString)
@@ -47,7 +58,6 @@ function ProfilePage() {
   const dateOptions = ["12. des", "13. des", "14. des", "15. des", "16. des", "17. des", "18. des", "19. des", "20. des", "21. des", "22. des", "23. des", "24. des"]
 
   const selectedChildGifts = GetFromLocalStorage()
-  console.log(selectedChildGifts);
   const CalculateTotalPrice = () => {
     let Total = 0;
     for (let i = 0; i < dateOptions.length; i++){
@@ -71,7 +81,7 @@ function ProfilePage() {
           <TotalPriceCalculator TotalPrice={CalculateTotalPrice()}/>
         </div>
         <div className="py-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {dateOptions.map((date, key) => {
+          {dateOptions.map((date) => {
             return (
               <div key={date}>
                 <GiftOverviewBox date={date} gift={GetFromLocalStorage()[date]?.ideas} price={GetFromLocalStorage()[date]?.price} />

@@ -1,13 +1,20 @@
 import { motion } from "framer-motion";
 import { Button } from "@/Components/ui/button";
-import type { Product } from "./SearchWithFilter";
-
+import type { Product } from "./SearchGifts";
+import { ChildrenPopUp } from "./ChildrenPopUp";
+import { DecorativeBorder } from "@/Components/DecorativeBorder";
+import { useState } from "react";
 
 interface SearchResultsProps {
   results: Product[];
+  isCardMode: boolean; // New prop to indicate card mode
 }
 
-export function SearchResults({ results }: SearchResultsProps) {
+
+export function SearchResults({ results, isCardMode }: SearchResultsProps) {
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
   return (
     <div
       className="grid grid-cols-1 [@media(min-width:700px)]:grid-cols-2 [@media(min-width:970px)]:grid-cols-3 gap-6 mb-10 mt-4"
@@ -21,56 +28,7 @@ export function SearchResults({ results }: SearchResultsProps) {
           className="relative w-[280px] bg-[#EEE2D2] px-7 pt-7 pb-6 overflow-hidden"
         >
           {/* Decorative brush border */}
-          <svg
-            viewBox="0 0 280 340"
-            preserveAspectRatio="none"
-            className="pointer-events-none absolute inset-0 w-full h-full w-100% h-100%"
-          >
-            <defs>
-              <filter id="brush-border">
-                <feTurbulence
-                  type="fractalNoise"
-                  baseFrequency="0.85 0.22"
-                  numOctaves={4}
-                  seed={6}
-                  result="noise"
-                />
-                <feDisplacementMap
-                  in="SourceGraphic"
-                  in2="noise"
-                  scale={6}
-                  xChannelSelector="R"
-                  yChannelSelector="G"
-                />
-              </filter>
-            </defs>
-            <rect
-              x={6}
-              y={6}
-              width={268}
-              height={328}
-              style={{
-                fill: "none",
-                stroke: "#1F3D3B",
-                strokeWidth: 4,
-                strokeLinecap: "round",
-                filter: "url(#brush-border)",
-              }}
-            />
-            <rect
-              x={6}
-              y={6}
-              width={268}
-              height={328}
-              style={{
-                fill: "none",
-                stroke: "#1F3D3B",
-                strokeWidth: 1,
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-              }}
-            />
-          </svg>
+          <DecorativeBorder />
 
           {/* Card content */}
           <img
@@ -85,11 +43,30 @@ export function SearchResults({ results }: SearchResultsProps) {
               {item.store}
             </a>
           </h5>
-          <Button size="sm" className="mt-2 w-full font-bold font-quicksand bg-darkgreen text-white hover:bg-darkergreen cursor-pointer">
-            Óska
+          <Button
+            onClick={() => {
+              if (isCardMode) {
+                setSelectedProduct(item);   // Set the selected product
+                setShowPopup(true);
+              } else {
+                localStorage.removeItem("selectedCard");
+              }
+            }}
+            size="sm"
+            className="mt-2 w-full font-bold font-quicksand bg-darkgreen text-white hover:bg-darkergreen cursor-pointer"
+          >
+            {isCardMode ? "Óska" : "Eyða"}
           </Button>
         </motion.div>
       ))}
+
+      {showPopup && selectedProduct && (
+        <ChildrenPopUp
+          visible={showPopup}
+          productToSave={selectedProduct}
+          onClose={() => setShowPopup(false)}
+        />
+      )}
     </div>
   );
 }

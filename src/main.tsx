@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import "./main.css"
-import Leita from "./Pages/Leita.tsx";
+import Leita from "./Pages/Search.tsx";
 import WishList from "./Pages/WishList.tsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";

@@ -17,7 +17,7 @@ export default function Navbar() {
       {/* Logo */}
 <Link to="/ProfilePage">
   <img
-    src="src/Pictures/logo.svg"
+src="src/Pictures/logo-skosveinar.svg"
     alt="Logo"
     className="w-12 h-12"
   />
@@ -59,3 +59,4 @@ export default function Navbar() {
     </nav>
   );
 }
+    

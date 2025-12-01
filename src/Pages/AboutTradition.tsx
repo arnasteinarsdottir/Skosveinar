@@ -1,8 +1,7 @@
 
-import Navbar from "@/Components/Navbar";
-import Player from "@/Components/Player";
+import Navbar from "src/Components/Navbar.tsx"; 
+import Player from "../Components/Player.tsx";
 import Carousel from "../Components/carousel";
-
 
 function AboutTradition() {
     return (

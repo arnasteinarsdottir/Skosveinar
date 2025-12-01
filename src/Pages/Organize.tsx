@@ -1,6 +1,19 @@
+import FancyDropdown from "../Components/FancyDropdown";
 import OrganizingInput from "../Components/OrganizingInput";
 import SantaCard from "../Components/SantaCard";
-import Navbar from "@/Components/Navbar";
+import Navbar from "../Components/Navbar";
+import ChooseDateDropdown from "../Components/ChooseDateDropdown";
+import { useState } from "react";
+
+type Child = {
+    name: string;
+    gifts: {
+        [key: string]: {
+            ideas: string;
+            price: number;
+        };
+    };
+}
 
 function Organize () {
 
@@ -47,7 +60,7 @@ function Organize () {
     const setToLocalStorage = () => {
         const getChildName = localStorage.getItem("children") || "[]";
         const arrayOfChildren = JSON.parse(getChildName);
-        const changedArray = arrayOfChildren.map ((child) => {
+        const changedArray = arrayOfChildren.map ((child: Child) => {
             if (child.name === nameSelected) {
                 return (
                     {
@@ -68,35 +81,11 @@ function Organize () {
 
         localStorage.setItem("children", JSON.stringify(changedArray));
     }
-/*
-    const setToLocalStorage = () => {
-        const getChildName = localStorage.getItem("children") || "[]";
-        const arrayOfChildren = JSON.parse(getChildName);
-        const changedArray = arrayOfChildren.map ((child) => {
-            if (child.name === nameSelected) {
-                return (
-                    {
-                        name: nameSelected,
-                        gifts: {[dateSelected]: {
-                            ideas: inputGiftIdeas,
-                            price: inputGiftPrice
-                        }}
-                    }
-                ) 
-            }
-            return child
-        }) 
-        
-
-        localStorage.setItem("children", JSON.stringify(changedArray));
-    }
-        */
-    
 
     const dateOptions = ["12. des", "13. des", "14. des", "15. des", "16. des", "17. des", "18. des", "19. des", "20. des", "21. des", "22. des", "23. des", "24. des"]
 
-    const childrenSTR = localStorage.getItem("children");
-    const options = JSON.parse(childrenSTR)?.map((child) => {
+    const childrenSTR = localStorage.getItem("children") || "[]";
+    const options = JSON.parse(childrenSTR)?.map((child: Child) => {
         return (
             child.name
         )
@@ -105,8 +94,8 @@ function Organize () {
     return (
 
         <>
-        <Navbar/>
-                <div className="pt-20"></div>
+            <Navbar />
+            <div className="mt-40"></div>
             <div className="flex flex-col items-center mt-14">
                 <div className="flex flex-col items-start md:items-center">
                     <p className="font-cinzel text-2xl md:text-4xl text-darkbrown">

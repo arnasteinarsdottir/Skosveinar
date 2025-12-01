@@ -1,43 +1,41 @@
-
-
 function AboutUs() {
   return (
-    <div className="w-auto bg-no-repeat bg-center " style={{backgroundImage:`url("src/Pictures/Background-frame-new.svg")`}}>
-      {/* TEXT */}
-      <div className="flex flex-col items-center justify-center mt-10 p-10">
-      <h1 className="
-          flex
-          justify-center
-          items-center
-      text-darkbrown
-          text-center 
-          font-cinzel
-          font-bold
-         text-[32px] ">
-        Um Okkur
-      </h1>
-          <p className="font-quicksand  justify-center items-center font-[16px]">
-            Jólasveinar sér um jólasveinana: Hver kemur hvenær, einfaldar og
+    <>
+      <div className="w-full max-h-[550px] relative md:mb-30">
+        {/* Background Image */}
+        <img
+          src="src/Pictures/last-frame.svg"
+          className="w-full min-h-[500px] object-cover"
+          alt="background-pic"
+        />
+
+    
+        <div className="absolute inset-0 flex flex-col items-center text-justify  font-quicksand text-darkbrown justify-center z-20">
+        
+            <div className="w-[500px] p-10 md:text-xl">
+              <h1 className="font-cinzel text-[24px] text-center mb-10 md:text-3xl">Um okkur</h1>
+          <p>
+            Skósveinar sér um jólasveinana: Hver kemur hvenær, einfaldar og
             skapandi óskalista hugmyndir að smágjöfum í skóinn og skipulag sem
             tekur tillit til buddu og umhverfis.
           </p>
 
-          <p className="font-quicksand font-[16px] mt-4">
-            Kjarninn er samfélagslegur sáttmáli um jólasveinagjafir—hófsemi,
+          <p className="mt-4">
+            Kjarninn er samfélagslegur sáttmáli um  jólasveinagjafir
+            hófsemi,
             skýrt verðbil og samræmdar væntingar.
           </p>
-
-          <p className="font-quicksand font-[16px] mt-4">
-            Minna stress, meiri jólafriður.
-          </p>
+          <p className="mt-4">Minna stress, meiri jólafriður</p>
+          </div>
+      
+      <img className=" absolute
+           min-w-[140px] max-w-[220px]
+             bottom-[70px] 
+             left-[75%]
+             -z-10" src="src/Pictures/christmas-cat.png"></img>         
         </div>
-
-        {/* CAT */}
-        <img
-          src="src/Pictures/christmas-cat.png"
-          alt="Christmas Cat"
-        />
-    </div>
+      </div>
+    </>
   );
 }
 

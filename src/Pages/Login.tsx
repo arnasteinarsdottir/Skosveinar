@@ -6,7 +6,7 @@ function LoginPage() {
     {/* Login Page */}
 <div className="bg-background w-full h-screen flex flex-col items-center justify-center ">
      {/* Logo */}
-    <img className="mb-[3.69rem]" src="#" alt="Logo" />
+    <img className="mb-8" src="src\Pictures\logo-skosveinar-brown.svg" alt="Logo" />
      {/* User name, password, email */}
 <div className="flex flex-col items-center justify-center gap-[1.31rem]">
   <div className="flex w-[20rem] h-12 border border-darkgreen rounded-[10px] items-center gap-3 px-3">

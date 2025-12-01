@@ -1,5 +1,5 @@
 
-import Navbar from "src/Components/Navbar.tsx"; 
+import Navbar from "../Components/Navbar.tsx"; 
 import Player from "../Components/Player.tsx";
 import Carousel from "../Components/carousel";
 

@@ -19,19 +19,19 @@ function Organize () {
 
       // Creating a array of dates I want displayed as options in ChooseDateDropdown
     const dropdownDates = [
-          "12. des", 
-          "13. des", 
-          "14. des", 
-          "15. des", 
-          "16. des", 
-          "17. des", 
-          "18. des", 
-          "19. des", 
-          "20. des", 
-          "21. des", 
-          "22. des", 
-          "23. des", 
-          "24. des"
+          "12. DES", 
+          "13. DES", 
+          "14. DES", 
+          "15. DES", 
+          "16. DES", 
+          "17. DES", 
+          "18. DES", 
+          "19. DES", 
+          "20. DES", 
+          "21. DES", 
+          "22. DES", 
+          "23. DES", 
+          "24. DES"
     ];
 
     const [nameSelected, setNameSelected] = useState("Veldu barn"); 
@@ -95,8 +95,8 @@ function Organize () {
 
         <>
             <Navbar />
-            <div className="mt-40"></div>
-            <div className="flex flex-col items-center mt-14">
+            <div className="mt-32"></div>
+            <div className="flex flex-col items-center">
                 <div className="flex flex-col items-start md:items-center">
                     <p className="font-cinzel text-2xl md:text-4xl text-darkbrown">
                         Hugmyndabanki <br />
@@ -107,7 +107,10 @@ function Organize () {
                             <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
                             <FancyDropdown selectOption ={selectDate} optionSelected = {dateSelected} options = {dateOptions} />
                         </div>
-                        <ChooseDateDropdown dropdownDates={dropdownDates} />
+                        <div className="flex justify-between">
+                            <ChooseDateDropdown dropdownDates={dropdownDates} />
+                            <ChooseDateDropdown dropdownDates={dropdownDates} />
+                        </div>
                         <div className="mt-8 md:gap-6 md:flex">
                             <div className="pb-6 md:pb-0">
                                 <SantaCard 

@@ -39,7 +39,6 @@ function SantaCard ({ date, santanumber }: Props) {
         Kertasníkir
     ];
 
-    
 
     return (
         <>
@@ -55,7 +54,7 @@ function SantaCard ({ date, santanumber }: Props) {
                     <img 
                         src={SantaClauses[santanumber]} 
                         alt="Jólasveinn"
-                        className="w-40 h-auto object-contain" 
+                        className="w-36 h-auto object-contain" 
                     />
                 </div>
             </div>

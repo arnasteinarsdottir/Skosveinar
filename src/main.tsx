@@ -10,6 +10,7 @@ import ProfilePage from "./Pages/ProfilePage.tsx"
 import Organize from "./Pages/Organize.tsx"
 import LoginPage from './Pages/Login.tsx';
 import AboutTradition from './Pages/AboutTradition.tsx';
+import Testing from './Pages/Testing.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -24,6 +25,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/profilepage" element={<ProfilePage />} />
         <Route path="/organize" element={<Organize />} />
         <Route path="/wishlist" element={<WishList />} />
+        <Route path="/testing" element={<Testing />} />
 
 
       </Routes>

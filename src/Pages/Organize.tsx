@@ -2,7 +2,6 @@ import FancyDropdown from "../Components/FancyDropdown";
 import OrganizingInput from "../Components/OrganizingInput";
 import SantaCard from "../Components/SantaCard";
 import Navbar from "../Components/Navbar";
-import ChooseDateDropdown from "../Components/ChooseDateDropdown";
 import { useState } from "react";
 
 type Child = {
@@ -16,23 +15,6 @@ type Child = {
 }
 
 function Organize () {
-
-      // Creating a array of dates I want displayed as options in ChooseDateDropdown
-    const dropdownDates = [
-          "12. DES", 
-          "13. DES", 
-          "14. DES", 
-          "15. DES", 
-          "16. DES", 
-          "17. DES", 
-          "18. DES", 
-          "19. DES", 
-          "20. DES", 
-          "21. DES", 
-          "22. DES", 
-          "23. DES", 
-          "24. DES"
-    ];
 
     const [nameSelected, setNameSelected] = useState("Veldu barn"); 
     const [dateSelected, setDateSelected] = useState("Veldu dag");
@@ -107,15 +89,11 @@ function Organize () {
                             <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
                             <FancyDropdown selectOption ={selectDate} optionSelected = {dateSelected} options = {dateOptions} />
                         </div>
-                        <div className="flex justify-between">
-                            <ChooseDateDropdown dropdownDates={dropdownDates} />
-                            <ChooseDateDropdown dropdownDates={dropdownDates} />
-                        </div>
                         <div className="mt-8 md:gap-6 md:flex">
                             <div className="pb-6 md:pb-0">
                                 <SantaCard 
                                     date = {dateSelected}
-                                    santanumber = {dateOptions.indexOf(dateSelected)}
+                                    santanumber = {dateSelected !== "Veldu dag" ? dateOptions.indexOf(dateSelected) : 0}
                                 />
                             </div>
                             <OrganizingInput setToLocalStorage={setToLocalStorage} inputGiftIdeas = {inputGiftIdeas} inputGiftPrice = {inputGiftPrice} updateGiftIdeas = {updateGiftIdeas} updateGiftPrice = {updateGiftPrice}  />

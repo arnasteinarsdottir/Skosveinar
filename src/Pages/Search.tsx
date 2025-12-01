@@ -1,13 +1,13 @@
 
 
 import Navbar from "../Components/Navbar.tsx";
-import SearchWithFilter from "../Components/SearchWithFilter.tsx";
+import SearchGifts from "../Components/SearchGifts.tsx";
 
 function Leita() {
     return (
         <>  
         <Navbar/>
-        <SearchWithFilter/>
+        <SearchGifts/>
         </>
     );
     }

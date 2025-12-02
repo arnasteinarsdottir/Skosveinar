@@ -34,7 +34,7 @@ src="src/Pictures/logo-skosveinar.svg"
         mr-10
       ">
         <a className="flex flex-col items-center " href="/search">
-          <img src="src/Pictures/searchicon.svg" />
+          <img src="@/Pictures/searchicon.svg" />
           Leita
         </a>
         <a className="flex flex-col items-center mt-1" href="/Organize">

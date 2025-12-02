@@ -86,7 +86,7 @@ export default function SearchWithFilter() {
     params.set("price_min", priceRange[0].toString());
     params.set("price_max", priceRange[1].toString());
 
-    const url = `http://89.160.200.111:3000/search?${params.toString()}`;
+    const url = `https://89.160.200.111:3000/search?${params.toString()}`;
     console.log("Searching with URL:", url);
 
     try {

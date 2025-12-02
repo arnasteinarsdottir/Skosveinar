@@ -12,11 +12,11 @@ import LoginPage from "./Pages/Login.tsx";
 import AboutTradition from "./Pages/AboutTradition.tsx";
 import Testing from "./Pages/Testing.tsx";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/Search" element={<Search />} />
@@ -28,6 +28,6 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/wishlist" element={<WishList />} />
         <Route path="/testing" element={<Testing />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );

@@ -42,7 +42,7 @@ export function ProductCard({ product, isCardMode }: ProductCardProps) {
 
       {/* Card content */}
       <img
-        src={secureImageUrl} // ⬅️ Using the cleaned URL
+        src={product.image} // ⬅️ Using the cleaned URL
         alt={product.title}
         className="w-full h-32 object-cover rounded mb-4"
       />

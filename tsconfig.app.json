@@ -7,7 +7,7 @@
     "module": "ESNext",
     "types": ["vite/client"],
     "skipLibCheck": true,
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "paths": {
     "@/*": [
       "./src/*"
@@ -28,7 +28,7 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "ignoreDeprecations": "5.0",
+    "ignoreDeprecations": "6.0",
   },
   "include": ["src"]
 }

@@ -5,7 +5,7 @@ import BrownFilledButton from "../Components/BrownFilledButton";
 import AddChildModal from "../Components/AddChildModal";
 import Navbar from "../Components/Navbar"; 
 import {useState} from "react"; 
-import Navbar from "../Components/Navbar";
+
 
 type Gift = {
     [key: string]: {
@@ -75,14 +75,10 @@ function ProfilePage() {
       <Navbar />
       <div className="mt-40"></div>
       <div className=" flex flex-col items-center">
-<<<<<<< HEAD
-        <div className="flex">
-=======
         <div className ="mb-30">
         <Navbar />
         </div>
         <div className="flex justify-between items-start w-98 mt-14">
->>>>>>> 434697e548c018cdf132014c2061564282cfd4c0
           <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
           <BrownFilledButton 
             onClick = {() => setIsModalOpen(true)}

@@ -77,15 +77,15 @@ function Organize () {
 
         <>
             <Navbar />
-            <div className="mt-32"></div>
+            <div className="mt-40"></div>
             <div className="flex flex-col items-center">
                 <div className="flex flex-col items-start md:items-center">
                     <p className="font-cinzel text-2xl md:text-4xl text-darkbrown">
                         Hugmyndabanki <br />
                         jólasveinsins
                     </p>
-                    <div className="mt-14">
-                        <div className="flex justify-between">
+                    <div className="mt-20">
+                        <div className="flex justify-between flex-row max-sm:flex-col max-md:flex-col">
                             <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
                             <FancyDropdown selectOption ={selectDate} optionSelected = {dateSelected} options = {dateOptions} />
                         </div>

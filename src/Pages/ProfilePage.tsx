@@ -72,7 +72,7 @@ function ProfilePage() {
   return (
     <>
       <Navbar />
-      <div className="mt-32"></div>
+      <div className="mt-40"></div>
       <div className=" flex flex-col items-center">
         <div className="flex">
           <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />

@@ -33,13 +33,13 @@ function FancyDropdown({ selectOption, optionSelected, options }: Props) {
     }, []);
 
     return (
-        <div ref={wrapperRef} className="relative w-56">
+        <div ref={wrapperRef} className="relative w-56 pt-2">
             {/* BUTTON */}
             <button
                 onClick={openCloseDropdown}
-                className="flex items-center justify-between w-full gap-3"
+                className="flex items-center w-full gap-3"
             >
-                <span className="whitespace-nowrap font-cinzel text-4xl text-darkbrown">
+                <span className="whitespace-nowrap font-cinzel text-3xl text-darkbrown">
                     {optionSelected}
                 </span>
 

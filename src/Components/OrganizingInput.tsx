@@ -27,7 +27,10 @@ function OrganizingInput ({inputGiftIdeas, inputGiftPrice, updateGiftIdeas, upda
                         placeholder="Verð"
                         className="h-12 md:h-9 w-[70%] bg-[#F4F4F0] border-[1.5px] border-darkbrown font-normal rounded-lg pl-2 text-[#3E4140] font-quicksand focus:border-2 focus:border-[#6D726B] focus:outline-none focus:ring-0"
                     />
-                    <BrownFilledButton onClick={setToLocalStorage} />
+                    <BrownFilledButton 
+                        label = "Staðfesta"
+                        onClick={setToLocalStorage} 
+                    />
                 </div>
             </div>
         </form>

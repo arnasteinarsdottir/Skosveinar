@@ -73,14 +73,17 @@ function ProfilePage() {
     <>
       <Navbar />
       <div className="mt-40"></div>
-      <div className=" flex flex-col items-center">
-        <div className="flex">
-          <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
-          <BrownFilledButton 
-            onClick = {() => setIsModalOpen(true)}
-          />
+      <div className="flex flex-col items-center">
+        <div className="w-[85%] max-w-4xl md:w-[58%] px-8 sm:px-6">
+          <div className="flex items-center justify-between">
+            <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
+            <BrownFilledButton 
+              label = "Skrá barn"
+              onClick = {() => setIsModalOpen(true)}
+            />
+          </div>
         </div>
-        <div className="w-98 flex justify-end pt-12 md:flex md:justify-center">
+        <div className="flex items-center pt-20 pb-4 justify-center">
           <TotalPriceCalculator TotalPrice={CalculateTotalPrice()}/>
         </div>
         <div className="py-6 grid grid-cols-1 md:grid-cols-2 gap-6">

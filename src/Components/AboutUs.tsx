@@ -11,7 +11,7 @@ function AboutUs() {
         md:py-32
         mt-20
       "
-      style={{ backgroundImage: `url("src/Pictures/last-frame.svg")` }}
+      style={{ backgroundImage: `url("src/Pictures/background-aboutus.svg")` }}
     >
       {/* Content */}
       <div className="flex flex-col items-center justify-center text-darkbrown font-quicksand z-20 relative px-6">
@@ -39,9 +39,9 @@ function AboutUs() {
         <img
           className="
             absolute
-            bottom-10
-            right-10
+            bottom-0
             w-[150px]
+            -right-8
             md:w-[220px]
             z-10
           "

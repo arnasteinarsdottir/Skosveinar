@@ -78,7 +78,7 @@ export function BurgerMenu() {
           {/* Footer actions */}
           <div className="mt-auto flex flex-col items-center gap-10">
             {/* Language toggle */}
-            <LanguageToggle />
+            <h1 className="font-cinzel font-bold"> ÍSLENSKA / ENGLISH</h1>
 
             {/* Login */}
             <Button
@@ -91,7 +91,7 @@ export function BurgerMenu() {
             {/* Signup */}
             <div className="font-quicksand text-background text-xl text-center">
               <p>Áttu ekki aðgang?</p>
-              <Link to="/signup" onClick={() => setOpen(false)}>
+              <Link to="/login" onClick={() => setOpen(false)}>
                 Nýskráning
               </Link>
             </div>

@@ -3,6 +3,7 @@ import TotalPriceCalculator from "../Components/TotalPriceCalculator";
 import FancyDropdown from "../Components/FancyDropdown";
 import BrownFilledButton from "../Components/BrownFilledButton";
 import AddChildModal from "../Components/AddChildModal";
+import Navbar from "../Components/Navbar"; 
 import {useState} from "react"; 
 
 type Gift = {
@@ -71,6 +72,9 @@ function ProfilePage() {
   return (
     <>
       <div className=" flex flex-col items-center">
+        <div className ="mb-30">
+        <Navbar />
+        </div>
         <div className="flex justify-between items-start w-98 mt-14">
           <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
           <BrownFilledButton 

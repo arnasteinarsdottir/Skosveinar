@@ -21,15 +21,28 @@ export function ProductCard({ product, isCardMode }: ProductCardProps) {
       localStorage.removeItem("selectedCard");
     }
   };
-console.log("PRODUCT IMAGE:", product.image);
+
+  // ⭐️⭐️ NEW LOGIC STARTS HERE ⭐️⭐️
+  let secureImageUrl = product.image;
+
+  // This checks if the image link is insecure (http://) 
+  // and attempts to use the secure protocol (https://) instead.
+  if (secureImageUrl && secureImageUrl.startsWith("http://")) {
+    secureImageUrl = secureImageUrl.replace("http://", "https://");
+  }
+  // ⭐️⭐️ NEW LOGIC ENDS HERE ⭐️⭐️
+
+  console.log("ORIGINAL IMAGE URL:", product.image);
+  console.log("CLEANED IMAGE URL:", secureImageUrl);
+
   return (
     <div className="relative margin-0 bg-[#EEE2D2] px-7 pt-7 pb-6 overflow-hidden">
-      {/* Decorative  border */}
+      {/* Decorative  border */}
       <DecorativeBorder />
 
       {/* Card content */}
       <img
-        src={product.image}
+        src={secureImageUrl} // ⬅️ Using the cleaned URL
         alt={product.title}
         className="w-full h-32 object-cover rounded mb-4"
       />

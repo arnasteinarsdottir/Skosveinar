@@ -92,7 +92,7 @@ function Player() {
       </div>
 
       {/* Text under the player – unchanged */}
-      <div className="flex flex-col items-center justify-center gap-[1.69rem]">
+      <div className="flex flex-col font-quicksand items-center justify-center gap-[1.69rem] italic">
         <h2>
           Jólasveinarnir er byrjaður að safna gjafa hugmyndum
         </h2>

@@ -1,36 +1,90 @@
-
 import AboutUs from "@/Components/AboutUs.tsx";
 import Navbar from "@/Components/Navbar.tsx";
 import { ResponsiveSlider } from "@/Components/responsive-slider";
 import LogInLandigPage from "@/Components/LogInLandingPage.tsx";
 import Carousel from "@/Components/carousel";
+import { ProductCard } from "@/Components/ProductCard";
 
 function LandingPage() {
-
-
-    return (
-        <>  
-        <div className="pt-20">
-        <Carousel/>
-        <Navbar/>
+  return (
+    <>
+        <Navbar />
+      <div className="pt-20 flex flex-col w-full justify-center">
+        {/* Carousel */}
+        <div className="flex w-full justify-center">
+          <Carousel />
+        </div>
         <AboutUs />
         <LogInLandigPage />
-        <h1></h1>
-        <ResponsiveSlider items={[
-            <div key="1" className="bg-blue-500 h-48 flex items-center justify-center text-white text-2xl">Item 1</div>,
-            <div key="2" className="bg-blue-500 h-48 flex items-center justify-center text-white text-2xl">Item 2</div>,
-            <div key="3" className="bg-blue-500 h-48 flex items-center justify-center text-white text-2xl">Item 3</div>,
-            <div key="4" className="bg-blue-500 h-48 flex items-center justify-center text-white text-2xl">Item 3</div>, 
-            <div key="5" className="bg-blue-500 h-48 flex items-center justify-center text-white text-2xl">Item 3</div>, 
-            <div key="6" className="bg-blue-500 h-48 flex items-center justify-center text-white text-2xl">Item 3</div>
 
+        <h1 className="text-center font-cinzel text-darkbrown text-[36px] mb-12">
+          Skógjafa Óskalisti
+        </h1>
 
-        ]} 
-        
-        />
-    
+        <div className="flex justify-center items-center">
+          <ResponsiveSlider
+            items={[
+              <ProductCard
+                key="1"
+                isCardMode={true}
+                product={{
+                  title: "Leikfang",
+                  price: 2990,
+                  image: "https://placehold.co/300x200",
+                  link: "#",
+                  store: "Pollýanna",
+                }}
+              />,
+              <ProductCard
+                key="2"
+                isCardMode={true}
+                product={{
+                  title: "Bók",
+                  price: 4500,
+                  image: "https://placehold.co/300x200",
+                  link: "#",
+                  store: "Bóksalan",
+                }}
+              />,
+              <ProductCard
+                key="3"
+                isCardMode={true}
+                product={{
+                  title: "Aukahlutur",
+                  price: 1990,
+                  image: "https://placehold.co/300x200",
+                  link: "#",
+                  store: "Coolshop",
+                }}
+              />,
+              <ProductCard
+                key="4"
+                isCardMode={true}
+                product={{
+                  title: "Aukahlutur",
+                  price: 1990,
+                  image: "https://placehold.co/300x200",
+                  link: "#",
+                  store: "Coolshop",
+                }}
+              />,
+                 <ProductCard
+                key="4"
+                isCardMode={true}
+                product={{
+                  title: "Aukahlutur",
+                  price: 1990,
+                  image: "https://placehold.co/300x200",
+                  link: "#",
+                  store: "Coolshop",
+                }} />
+            ]}
+          />
         </div>
-        </>
-    );
-    }
-    export default LandingPage; 
+
+      </div>
+    </>
+  );
+}
+
+export default LandingPage;

@@ -6,10 +6,10 @@ export default function Navbar() {
   return (
     <nav className="
       fixed top-0 left-0 right-0 z-50 
-      h-16             
+      h-22           
       bg-darkbrown
       flex items-center justify-between 
-      px-4 
+      px-10
       mx-auto 
       md:max-w-full
     ">
@@ -33,7 +33,7 @@ src="src/Pictures/logo-skosveinar.svg"
         items-center
         mr-10
       ">
-        <a className="flex flex-col items-center " href="#">
+        <a className="flex flex-col items-center " href="/search">
           <img src="src/Pictures/searchicon.svg" />
           Leita
         </a>
@@ -41,7 +41,7 @@ src="src/Pictures/logo-skosveinar.svg"
           <img src="src/Pictures/shoeicon.svg" />
          Skipuleggja
         </a>
-           <a className="flex flex-col items-center " href="#">
+           <a className="flex flex-col items-center " href="/wishlist">
           <img src="src/Pictures/staricon.svg" />
          Óskalisti
         </a>

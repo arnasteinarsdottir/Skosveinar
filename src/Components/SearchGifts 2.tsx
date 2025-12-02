@@ -127,13 +127,13 @@ export default function SearchWithFilter() {
   return (
     <div className="py-4 space-y-4 bg-background min-h-screen mx-auto flex flex-col items-center min-w-[430px] max-[430px]:px-[35px]">
      
-      <div className="flex flex-row items-start mt-36 gap-6">
+      <div className="flex flex-row items-start mt-30 gap-0">
         <img
           src="src/Pictures/gryla1.png"
-          className="w-[150px] h-[100px] mt-7"
+          className="w-[150px] h-[100px]"
           alt="Gryla"
         />
-        <h4 className="font-cinzel text-[37.5px] text-darkbrown mt-0">
+        <h4 className="font-cinzel text-[25px] text-darkgreen mt-0">
           Leita að skó­gjöfum
         </h4>
       </div>

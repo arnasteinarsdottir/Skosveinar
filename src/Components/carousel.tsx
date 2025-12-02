@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 
 const images = [
-    '../../Images/12Stekkjarstaur.png',
+    '@/Images/12Stekkjarstaur.png',
     'Images/13Giljagaur.png',
     'Images/14Stufur.png',
     'Images/15Þvörusleikir.png',

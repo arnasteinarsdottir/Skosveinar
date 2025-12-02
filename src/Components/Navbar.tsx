@@ -32,11 +32,12 @@ src="src/Pictures/logo-skosveinar.svg"
         text-[20px]
         items-center
         mr-10
+
       ">
-        <a className="flex flex-col items-center " href="/search">
+        <Link to="/search" className="flex flex-col items-center ">
           <img src="@/Pictures/searchicon.svg" />
           Leita
-        </a>
+        </Link>
         <a className="flex flex-col items-center mt-1" href="/Organize">
           <img src="src/Pictures/shoeicon.svg" />
          Skipuleggja

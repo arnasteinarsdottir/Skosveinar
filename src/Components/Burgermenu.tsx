@@ -1,116 +1,103 @@
 import { useState } from "react"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuTrigger,
-} from "../Components Library/ui/dropdown-menu"
+import { Link } from "react-router-dom"
 import { Button } from "../Components Library/ui/button"
 import LanguageToggle from "../Components Library/language-toggle"
-import { Link } from "react-router-dom"
 
 export function BurgerMenu() {
   const [open, setOpen] = useState(false)
 
   return (
-    <DropdownMenu open={open} onOpenChange={setOpen}>
-      
-      {/* Trigger */}
-      <DropdownMenuTrigger asChild>
-        <img
-          src="src/Pictures/hamburger-menu.svg"
-          alt="menu icon"
-          onClick={() => setOpen(true)}
-        />
-      </DropdownMenuTrigger>
+    <>
+      {/* Burger icon (mobile only) */}
+      <img
+        src="src/Pictures/hamburger-menu.svg"
+        alt="menu"
+        className="md:hidden cursor-pointer"
+        onClick={() => setOpen(true)}
+      />
 
-      {/* Menu */}
-      <DropdownMenuContent
-        className="
-          md:hidden
-          flex flex-col
-          w-screen h-screen
-          bg-darkbrown
-          border-0 
-          shadow-none 
-          rounded-none
-        "
-      >
-        {/* X button */}
-        <DropdownMenuLabel className="flex justify-end pr-4 pt-[1.69rem] pb-24">
-          <img
-            src="src/Pictures/Veggieburger.svg"
-            alt="close menu"
-            className="w-6 h-6 cursor-pointer"
-            onClick={() => setOpen(false)}
-          />
-        </DropdownMenuLabel>
-<div>
-  <Link to="/search">
-    <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
-      <img src="src/Pictures/searchicon.svg" alt="menu icon" />
-      Leita
-    </DropdownMenuItem>
-  </Link>
+      {/* FULL SCREEN MENU OVERLAY */}
+      {open && (
+        <div
+          className="
+            fixed inset-0
+            bg-darkbrown
+            text-background
+            z-50
+            flex
+            flex-col
+            p-10
+            animate-fadeIn
+          "
+        >
+          {/* Close button */}
+          <div className="flex justify-end">
+            <img
+              src="src/Pictures/Veggieburger.svg"
+              alt="close"
+              className="w-8 h-8 cursor-pointer"
+              onClick={() => setOpen(false)}
+            />
+          </div>
 
-  <Link to="/organize">
-    <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
-      <img src="src/Pictures/staricon.svg" alt="menu icon" />
-      Skipuleggja
-    </DropdownMenuItem>
-  </Link>
+          {/* Menu Items */}
+          <nav className="mt-10 flex flex-col gap-6 font-cinzel text-3xl uppercase">
+            <Link
+              to="/search"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-3"
+            >
+              <img src="src/Pictures/searchicon.svg" alt="" /> Leita
+            </Link>
 
-  <Link to="/wishlist">
-    <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
-      <img src="src/Pictures/shoeicon.svg" alt="menu icon" />
-      Óskalisti
-    </DropdownMenuItem>
-  </Link>
+            <Link
+              to="/organize"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-3"
+            >
+              <img src="src/Pictures/staricon.svg" alt="" /> Skipuleggja
+            </Link>
 
-  <Link to="/abouttradition">
-    <DropdownMenuItem className="flex justify-start ml-12 font-cinzel text-[1.75rem] uppercase text-background">
-      <img src="src/Pictures/hat-icon.svg" alt="menu icon" />
-      Um hefðina
-    </DropdownMenuItem>
-  </Link>
-</div>
+            <Link
+              to="/wishlist"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-3"
+            >
+              <img src="src/Pictures/shoeicon.svg" alt="" /> Óskalisti
+            </Link>
 
-        {/* Language toggle */}
-        <div className="flex justify-end">
-          <LanguageToggle />
+            <Link
+              to="/abouttradition"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-3"
+            >
+              <img src="src/Pictures/hat-icon.svg" alt="" /> Um hefðina
+            </Link>
+          </nav>
+
+          {/* Footer actions */}
+          <div className="mt-auto flex flex-col items-center gap-10">
+            {/* Language toggle */}
+            <LanguageToggle />
+
+            {/* Login */}
+            <Button
+              variant="ghost"
+              className="text-background text-2xl font-quicksand border h-12 px-12"
+            >
+              <Link to="/login">Innskráning</Link>
+            </Button>
+
+            {/* Signup */}
+            <div className="font-quicksand text-background text-xl text-center">
+              <p>Áttu ekki aðgang?</p>
+              <Link to="/signup" onClick={() => setOpen(false)}>
+                Nýskráning
+              </Link>
+            </div>
+          </div>
         </div>
-
-        {/* Login button */}
-        <div className="flex justify-center mt-19">
-          <Button
-            variant="ghost"
-            className="
-              flex
-              font-quicksand
-              text-[18px]
-              text-background
-              w-56
-              font-bold
-              h-[3.38rem]
-              bg-transparent
-              border
-            "
-          >
-            <a href="/login">Innskráning</a>
-          </Button>
-        </div>
-
-        {/* Signup text */}
-        <div className="flex flex-col items-center justify-center  font-medium mt-6 gap-2 text-background font-[quicksand]">
-          <p>Áttu ekki aðgang?</p>
-          <a href="#">
-            <p>Nýskráning</p>
-          </a>
-        </div>
-      </DropdownMenuContent>
-    </DropdownMenu>
+      )}
+    </>
   )
 }
-
-

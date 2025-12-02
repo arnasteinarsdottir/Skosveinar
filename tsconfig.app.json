@@ -28,7 +28,10 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
+<<<<<<< HEAD
   
+=======
+>>>>>>> 434697e548c018cdf132014c2061564282cfd4c0
   },
   "include": ["src"]
 }

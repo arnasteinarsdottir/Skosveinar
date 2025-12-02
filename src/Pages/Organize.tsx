@@ -80,23 +80,48 @@ function Organize () {
             <div className="mt-40"></div>
             <div className="flex flex-col items-center">
                 <div className="flex flex-col items-start md:items-center">
-                    <p className="font-cinzel text-2xl md:text-4xl text-darkbrown">
+                    <p className="font-cinzel text-4xl text-darkbrown">
                         Hugmyndabanki <br />
                         jólasveinsins
                     </p>
                     <div className="mt-20">
-                        <div className="flex justify-between flex-row max-sm:flex-col max-md:flex-col">
-                            <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
-                            <FancyDropdown selectOption ={selectDate} optionSelected = {dateSelected} options = {dateOptions} />
-                        </div>
-                        <div className="mt-8 md:gap-6 md:flex">
-                            <div className="pb-6 md:pb-0">
-                                <SantaCard 
-                                    date = {dateSelected}
-                                    santanumber = {dateSelected !== "Veldu dag" ? dateOptions.indexOf(dateSelected) : 0}
-                                />
+                        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-6">
+                            {/* 1) Veldu barn (stays above SantaCard on md) */}
+                            <FancyDropdown
+                            selectOption={selectChild}
+                            optionSelected={nameSelected}
+                            options={options}
+                            />
+
+                            {/* 2) Veldu dag (will be above OrganizingInput on md) */}
+                            <FancyDropdown
+                            selectOption={selectDate}
+                            optionSelected={dateSelected}
+                            options={dateOptions}
+                            />
+
+                            {/* 3) SantaCard – under Veldu barn */}
+                            <div className="mt-8 md:mt-4 pb-6 md:pb-0">
+                            <SantaCard
+                                date={dateSelected}
+                                santanumber={
+                                dateSelected !== "Veldu dag"
+                                    ? dateOptions.indexOf(dateSelected)
+                                    : 0
+                                }
+                            />
                             </div>
-                            <OrganizingInput setToLocalStorage={setToLocalStorage} inputGiftIdeas = {inputGiftIdeas} inputGiftPrice = {inputGiftPrice} updateGiftIdeas = {updateGiftIdeas} updateGiftPrice = {updateGiftPrice}  />
+
+                            {/* 4) OrganizingInput – under Veldu dag */}
+                            <div className="mt-2 md:mt-4">
+                            <OrganizingInput
+                                setToLocalStorage={setToLocalStorage}
+                                inputGiftIdeas={inputGiftIdeas}
+                                inputGiftPrice={inputGiftPrice}
+                                updateGiftIdeas={updateGiftIdeas}
+                                updateGiftPrice={updateGiftPrice}
+                            />
+                            </div>
                         </div>
                     </div>
                 </div>

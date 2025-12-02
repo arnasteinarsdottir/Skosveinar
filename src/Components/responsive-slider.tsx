@@ -78,11 +78,11 @@ export function ResponsiveSlider({ items, onSlide }: SliderProps) {
   }
 
   return (
-    <div className="w-full">
+    <div className="flex justify-center items-center mx-auto">
       {/* Slider Container */}
       <div
         ref={containerRef}
-        className="relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden md:margin-0"
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleEnd}

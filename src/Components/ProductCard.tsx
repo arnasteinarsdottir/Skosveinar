@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/Components/ui/button";
 import type { Product } from "./SearchGifts";
 import { DecorativeBorder } from "@/Components/DecorativeBorder";
-import { ChildrenPopUp } from "./ChildrenPopUp";
 
 interface ProductCardProps {
   product: Product;
@@ -22,27 +21,26 @@ export function ProductCard({ product, isCardMode }: ProductCardProps) {
     }
   };
 
-  // ⭐️⭐️ NEW LOGIC STARTS HERE ⭐️⭐️
-  let secureImageUrl = product.image;
+  // ⭐ FIXED IMAGE URL HANDLING ⭐
+  let imageUrl = product.image || "";
 
-  // This checks if the image link is insecure (http://) 
-  // and attempts to use the secure protocol (https://) instead.
-  if (secureImageUrl && secureImageUrl.startsWith("http://")) {
-    secureImageUrl = secureImageUrl.replace("http://", "https://");
+  // If API gives a relative path → add server URL
+  if (imageUrl.startsWith("/")) {
+    imageUrl = "http://89.160.200.111:3000" + imageUrl;
   }
-  // ⭐️⭐️ NEW LOGIC ENDS HERE ⭐️⭐️
 
-  console.log("ORIGINAL IMAGE URL:", product.image);
-  console.log("CLEANED IMAGE URL:", secureImageUrl);
+  // If API uses http → upgrade to https if possible
+  if (imageUrl.startsWith("http://")) {
+    imageUrl = imageUrl.replace("http://", "https://");
+  }
 
   return (
     <div className="relative margin-0 bg-[#EEE2D2] px-7 pt-7 pb-6 overflow-hidden">
-      {/* Decorative  border */}
       <DecorativeBorder />
 
       {/* Card content */}
       <img
-        src={secureImageUrl} // ⬅️ Using the cleaned URL
+        src={imageUrl}
         alt={product.title}
         className="w-full h-32 object-cover rounded mb-4"
       />
@@ -72,13 +70,6 @@ export function ProductCard({ product, isCardMode }: ProductCardProps) {
         {isCardMode ? "Óska" : "Eyða"}
       </Button>
 
-      {showPopup && selectedProduct && (
-        <ChildrenPopUp
-          visible={showPopup}
-          productToSave={selectedProduct}
-          onClose={() => setShowPopup(false)}
-        />
-      )}
     </div>
   );
 }

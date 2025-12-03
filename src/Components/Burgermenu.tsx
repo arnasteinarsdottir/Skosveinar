@@ -1,16 +1,15 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { Button } from "../Components Library/ui/button"
-import LanguageToggle from "../Components Library/language-toggle"
 
 export function BurgerMenu() {
   const [open, setOpen] = useState(false)
 
   return (
     <>
-      {/* Burger icon (mobile only) */}
+      {/* Burger icon*/}
       <img
-        src="src/Pictures/hamburger-menu.svg"
+        src="src/Pictures/brown-burger-menu.svg"
         alt="menu"
         className="md:hidden cursor-pointer"
         onClick={() => setOpen(true)}
@@ -33,7 +32,7 @@ export function BurgerMenu() {
           {/* Close button */}
           <div className="flex justify-end">
             <img
-              src="src/Pictures/Veggieburger.svg"
+              src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/Veggieburger.svg"
               alt="close"
               className="w-8 h-8 cursor-pointer"
               onClick={() => setOpen(false)}
@@ -47,7 +46,7 @@ export function BurgerMenu() {
               onClick={() => setOpen(false)}
               className="flex items-center gap-3"
             >
-              <img src="src/Pictures/searchicon.svg" alt="" /> Leita
+              <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/searchicon.svg" alt="search_icon" /> Leita
             </Link>
 
             <Link
@@ -55,7 +54,7 @@ export function BurgerMenu() {
               onClick={() => setOpen(false)}
               className="flex items-center gap-3"
             >
-              <img src="src/Pictures/staricon.svg" alt="" /> Skipuleggja
+              <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/staricon.svg" alt="organize-icon" /> Skipuleggja
             </Link>
 
             <Link
@@ -63,7 +62,7 @@ export function BurgerMenu() {
               onClick={() => setOpen(false)}
               className="flex items-center gap-3"
             >
-              <img src="src/Pictures/shoeicon.svg" alt="" /> Óskalisti
+              <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/shoeicon.svg" alt="shoes-icon" /> Óskalisti
             </Link>
 
             <Link
@@ -71,7 +70,7 @@ export function BurgerMenu() {
               onClick={() => setOpen(false)}
               className="flex items-center gap-3"
             >
-              <img src="src/Pictures/hat-icon.svg" alt="" /> Um hefðina
+              <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/hat-icon.svg" alt="hat-icon" /> Um hefðina
             </Link>
           </nav>
 

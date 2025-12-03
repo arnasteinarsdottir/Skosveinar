@@ -9,8 +9,11 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, isCardMode }: ProductCardProps) {
+
   const [showPopup, setShowPopup] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  console.log(showPopup); 
+  console.log(selectedProduct); 
 
   const handleClick = () => {
     if (isCardMode) {

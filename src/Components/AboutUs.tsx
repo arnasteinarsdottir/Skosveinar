@@ -11,7 +11,7 @@ function AboutUs() {
         md:py-32
         mt-20
       "
-      style={{ backgroundImage: `url("src/Pictures/background-aboutus.svg")` }}
+      style={{ backgroundImage: `url("https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/background-aboutus.svg")` }}
     >
       {/* Content */}
       <div className="flex flex-col items-center justify-center text-darkbrown font-quicksand z-20 relative px-6">
@@ -45,7 +45,7 @@ function AboutUs() {
             md:w-[220px]
             z-10
           "
-          src="src/Pictures/christmas-cat.png"
+          src="https://github.com/arnasteinarsdottir/Skosveinar/blob/main/src/Pictures/christmas-cat.png?raw=true"
           alt="Christmas Cat"
         />
       </div>

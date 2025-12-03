@@ -7,7 +7,7 @@ import { FilterMenu } from "@/Components/FilterMenu";
 import { Button } from "@/Components/ui/button";
 
 
-// --- types ---
+// types 
 export interface Product {
   title: string;
   price: number;
@@ -17,7 +17,7 @@ export interface Product {
   category?: string;
 }
 
-// --- consts ---
+// consts
 const categories = ["Bækur", "Leikföng", "Aukahlutir"];
 const stores = ["Pollýanna", "Bóksala stúdenta", "Coolshop"];
 
@@ -75,54 +75,40 @@ export default function SearchWithFilter() {
 
   const toggleFilter = () => setShowFilter((prev) => !prev);
 
-  const handleSearch = async () => {
-    setShowFilter(false);
+const handleSearch = async () => {
+  setShowFilter(false);
 
-    const params = new URLSearchParams();
-    params.set("q", query);
-    if (selectedCategories.length)
-      params.set("category", selectedCategories.join(","));
-    if (selectedStores.length) params.set("stores", selectedStores.join(","));
-    params.set("price_min", priceRange[0].toString());
-    params.set("price_max", priceRange[1].toString());
+  const params = new URLSearchParams();
 
-    const url = `http://89.160.200.111:3000/search?${params.toString()}`;
-    console.log("Searching with URL:", url);
+  if (query.trim()) {
+    params.set("q", query.trim());
+  }
 
-    try {
-      const response = await axios.get<Product[]>(url);
-      let filtered = response.data;
+  if (selectedCategories.length) {
+    params.set("category", selectedCategories.join(","));
+  }
 
-      if (query.trim()) {
-        const q = query.toLowerCase();
-        filtered = filtered.filter(
-          (item) =>
-            item.title?.toLowerCase().includes(q) ||
-            item.store?.toLowerCase().includes(q)
-        );
-      }
+  if (selectedStores.length) {
+    params.set("stores", selectedStores.join(","));
+  }
 
-      if (selectedCategories.length) {
-        filtered = filtered.filter((item) =>
-          selectedCategories.includes(item.category || "")
-        );
-      }
+  params.set("price_min", priceRange[0].toString());
+  params.set("price_max", priceRange[1].toString());
 
-      if (selectedStores.length) {
-        filtered = filtered.filter((item) =>
-          selectedStores.includes(item.store)
-        );
-      }
+  const url = `http://89.160.200.111:3000/search?${params.toString()}`;
+  console.log("Searching with URL:", url);
 
-      filtered = filtered.filter(
-        (item) => item.price >= priceRange[0] && item.price <= priceRange[1]
-      );
+  try {
+    const response = await axios.get<Product[]>(url);
+    // ВАЖНО: никаких дополнительных фильтров здесь больше нет
+    setResults(response.data);
+  } catch (err) {
+    console.error("Search error:", err);
+  }
+};
 
-      setResults(filtered);
-    } catch (err) {
-      console.error("Search error:", err);
-    }
-  };
+
+ 
 
   return (
     <div className="py-4 space-y-4 bg-background min-h-screen mx-auto flex flex-col items-center min-w-[430px] max-[430px]:px-[35px]">

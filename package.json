@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "homepage": "https://github.com/arnasteinarsdottir/Skosveinar.git",
-=======
   "homepage": "https://arnasteinarsdottir.github.io/Skosveinar/",
->>>>>>> d3ba02aaa54b29974aaf9fc0092711e10e9cea44
   "name": "skosveinar",
   "private": true,
   "version": "0.0.0",

@@ -129,7 +129,7 @@ export default function SearchWithFilter() {
      
       <div className="flex flex-row items-start mt-36 gap-6">
         <img
-          src="src/Pictures/gryla1.png"
+          src="https://github.com/arnasteinarsdottir/Skosveinar/blob/main/src/Pictures/gryla1.png?raw=true"
           className="w-[150px] h-[100px] mt-7"
           alt="Gryla"
         />
@@ -151,7 +151,7 @@ export default function SearchWithFilter() {
           />
           <img
             onClick={handleSearch}
-            src="src/Pictures/Search-icon.svg"
+            src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/Search-icon.svg"
             alt="Search Icon"
             className="absolute right-3 top-1/2 -translate-y-1/2"
           />
@@ -164,9 +164,9 @@ export default function SearchWithFilter() {
           onClick={toggleFilter}
         >
           {showFilter ? (
-            <img src="src/Pictures/Cross-icon.svg" alt="Close Icon" />
+            <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/Cross-icon.svg" alt="Close Icon" />
           ) : (
-            <img src="src/Pictures/Filter-icon.svg" alt="Filter Icon" />
+            <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/Filter-icon.svg" alt="Filter Icon" />
           )}
         </Button>
       </div>

@@ -52,7 +52,7 @@ export default function ChildGiftViewer() {
     <div 
       className="relative">
       <img
-        src="src/Pictures/köttur.png"
+        src="https://github.com/arnasteinarsdottir/Skosveinar/blob/main/src/Pictures/k%C3%B6ttur.png?raw=true"
         className="absolute top-24 right-22 z-0"
         alt="Jólaköttur"
       />

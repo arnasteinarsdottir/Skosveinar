@@ -7,9 +7,9 @@ export function BurgerMenu() {
 
   return (
     <>
-      {/* Burger icon (mobile only) */}
+      {/* Burger icon*/}
       <img
-        src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/hamburger-menu.svg"
+        src="src/Pictures/brown-burger-menu.svg"
         alt="menu"
         className="md:hidden cursor-pointer"
         onClick={() => setOpen(true)}
@@ -32,7 +32,7 @@ export function BurgerMenu() {
           {/* Close button */}
           <div className="flex justify-end">
             <img
-              src="src/Pictures/Veggieburger.svg"
+              src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/Veggieburger.svg"
               alt="close"
               className="w-8 h-8 cursor-pointer"
               onClick={() => setOpen(false)}

@@ -1,19 +1,22 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import "./main.css"
-import Search from "./Pages/Search.tsx"
-import WishList from "./Pages/WishList.tsx"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import  ProfilePage from "./Pages/ProfilePage.tsx"
-import Organize from "./Pages/Organize.tsx"
-import LoginPage from './Pages/Login.tsx';
-import AboutTradition from './Pages/AboutTradition.tsx';
-import Testing from './Pages/Testing.tsx';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-createRoot(document.getElementById('root')!).render(
+import App from "./App.tsx";
+import "./main.css";
+
+import Search from "./Pages/Search.tsx";
+import WishList from "./Pages/WishList.tsx";
+import ProfilePage from "./Pages/ProfilePage.tsx";
+import Organize from "./Pages/Organize.tsx";
+import LoginPage from "./Pages/Login.tsx";
+import AboutTradition from "./Pages/AboutTradition.tsx";
+import Testing from "./Pages/Testing.tsx";
+
+import { HashRouter, Routes, Route } from "react-router-dom";
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/Search" element={<Search />} />
@@ -24,9 +27,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/organize" element={<Organize />} />
         <Route path="/wishlist" element={<WishList />} />
         <Route path="/testing" element={<Testing />} />
-
-
       </Routes>
-    </BrowserRouter>
-  </StrictMode>,
-)
+    </HashRouter>
+  </StrictMode>
+);

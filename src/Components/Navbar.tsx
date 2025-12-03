@@ -1,7 +1,6 @@
 import { BurgerMenu } from "../Components/Burgermenu.tsx";
 import { Link } from "react-router-dom";
 
-
 export default function Navbar() {
   return (
     <nav className="
@@ -17,7 +16,7 @@ export default function Navbar() {
       {/* Logo */}
 <Link to="/ProfilePage">
   <img
-src="src/Pictures/logo-skosveinar.svg"
+  src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/logo-skosveinar.svg"
     alt="Logo"
     className="w-12 h-12"
   />
@@ -32,23 +31,28 @@ src="src/Pictures/logo-skosveinar.svg"
         text-[20px]
         items-center
         mr-10
+
       ">
-        <a className="flex flex-col items-center " href="/search">
-          <img src="src/Pictures/searchicon.svg" />
-          Leita
-        </a>
-        <a className="flex flex-col items-center mt-1" href="/Organize">
-          <img src="src/Pictures/shoeicon.svg" />
-         Skipuleggja
-        </a>
-           <a className="flex flex-col items-center " href="/wishlist">
-          <img src="src/Pictures/staricon.svg" />
-         Óskalisti
-        </a>
-        <a className="flex flex-col items-center " href="/AboutTradition">
-          <img src="src/Pictures/hat-icon.svg" />
-          Um hefðina
-        </a>
+<Link to="/search" className="flex flex-col items-center">
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/searchicon.svg" />
+  Leita
+</Link>
+
+<Link to="/Organize" className="flex flex-col items-center mt-1">
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/shoeicon.svg" />
+  Skipuleggja
+</Link>
+
+<Link to="/wishlist" className="flex flex-col items-center">
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/staricon.svg" />
+  Óskalisti
+</Link>
+
+<Link to="/AboutTradition" className="flex flex-col items-center">
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/hat-icon.svg" />
+  Um hefðina
+</Link>
+
       </div>
 
       {/* Mobile hamburger */}

@@ -6,19 +6,28 @@ export default function Navbar() {
     <nav className="
       fixed top-0 left-0 right-0 z-50 
       h-22           
-      bg-darkbrown
+     md:bg-darkbrown
+     bg-background
       flex items-center justify-between 
       px-10
       mx-auto 
       md:max-w-full
     ">
       
-      {/* Logo */}
+  {/* Logo */}
 <Link to="/ProfilePage">
+  {/* Mobile logo */}
   <img
-  src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/logo-skosveinar.svg"
+    src="src/Pictures/logo-brown-navbar.png"
     alt="Logo"
-    className="w-12 h-12"
+    className="w-12 h-12 block md:hidden"
+  />
+
+  {/* Desktop logo */}
+  <img
+    src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/logo-skosveinar.svg"
+    alt="Logo"
+    className="hidden md:block w-15 h-15"
   />
 </Link>
       {/* Desktop navigation */}

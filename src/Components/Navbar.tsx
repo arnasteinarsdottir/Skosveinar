@@ -18,7 +18,7 @@ export default function Navbar() {
 <Link to="/ProfilePage">
   {/* Mobile logo */}
   <img
-    src="src/Pictures/logo-brown-navbar.png"
+    src="https://github.com/arnasteinarsdottir/Skosveinar/blob/main/src/Pictures/logo-brown-navbar.png?raw=true"
     alt="Logo"
     className="w-12 h-12 block md:hidden"
   />

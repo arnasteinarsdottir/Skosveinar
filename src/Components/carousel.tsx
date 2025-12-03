@@ -1,19 +1,19 @@
 import {useState, useEffect} from 'react';
 
 const images = [
-    '@/Images/12Stekkjarstaur.png',
-    'Images/13Giljagaur.png',
-    'Images/14Stufur.png',
-    'Images/15Þvörusleikir.png',
-    'Images/16Pottaskefill.png',
-    'Images/17Askasleikir.png',
-    'Images/18Hurðaskellir.png',
-    'Images/19Skyrgámur.png',
-    'Images/20Bjúgnakrækir.png',
-    'Images/21Gluggagægir.png',
-    'Images/22Gáttaþefur.png',
-    'Images/23Ketkrókur.png',
-    'Images/24Kertasníkir.png'
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/12Stekkjarstaur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/13Giljagaur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/14Stufur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/15%C3%9Ev%C3%B6rusleikir.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/16Pottaskefill.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/17Askasleikir.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/18Hur%C3%B0askellir.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/19Skyrg%C3%A1mur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/20Bj%C3%BAgnakr%C3%A6kir.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/21Gluggag%C3%A6gir.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/22G%C3%A1tta%C3%BEefur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/23Ketkr%C3%B3kur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/24Kertasn%C3%ADkir.png?raw=true'
 ]
 
 const santas =[

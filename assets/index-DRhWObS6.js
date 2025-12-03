@@ -91,7 +91,7 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
       px-10\r
       mx-auto \r
       md:max-w-full\r
-    `,children:[m.jsxs(qe,{to:"/ProfilePage",children:[m.jsx("img",{src:"src/Pictures/logo-brown-navbar.svg",alt:"Logo",className:"w-12 h-12 block md:hidden"}),m.jsx("img",{src:"https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/logo-skosveinar.svg",alt:"Logo",className:"hidden md:block w-15 h-15"})]}),m.jsxs("div",{className:`\r
+    `,children:[m.jsxs(qe,{to:"/ProfilePage",children:[m.jsx("img",{src:"https://github.com/arnasteinarsdottir/Skosveinar/blob/main/src/Pictures/logo-brown-navbar.png?raw=true",alt:"Logo",className:"w-12 h-12 block md:hidden"}),m.jsx("img",{src:"https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/logo-skosveinar.svg",alt:"Logo",className:"hidden md:block w-15 h-15"})]}),m.jsxs("div",{className:`\r
         hidden md:flex \r
         gap-10 \r
         font-cinzel\r

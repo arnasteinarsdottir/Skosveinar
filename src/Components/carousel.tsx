@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 const images = [
     'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/12Stekkjarstaur.png?raw=true',
@@ -129,7 +130,7 @@ function Carousel({ changer }: CarouselProps) {
 
                 {/* Large center*/}
                 <div className={`inline-block ${isMovingLeft && "transition-all duration-400 ease-in-out scale-[71.5%] md:scale-[70%] origin-top-left ml-[px] md:ml-[-60px]"} ${isMovingRight && "transition-all duration-400 ease-in-out scale-[71.5%] md:scale-[70%] origin-top-right"}`}>
-                    <a href="#">
+                    <Link to="../AboutTradition">
                         <img 
                             src={images[currentIndex]}
                             alt={santas[currentIndex]} 
@@ -138,7 +139,7 @@ function Carousel({ changer }: CarouselProps) {
                         <p className={`w-[140px] md:w-[200px] font-[quicksand] text-[17.5px] md:text-[25px] font-semibold text-center`}>
                             {santas[currentIndex]}
                         </p>
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Medium right*/}
@@ -183,7 +184,7 @@ function Carousel({ changer }: CarouselProps) {
                     disabled={isMovingRight}
                     className='flex justify-center items-center bg-[#4E2513] w-[53px] h-7 rounded-lg hover:cursor-pointer'>
                     <img 
-                        src="Images/ArrowLeft.svg" 
+                        src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/5999fd72b710dfcc024388d672a5f812279bb99a/Images/ArrowLeft.svg" 
                         alt="Previous" 
                     />
                 </button>
@@ -195,7 +196,7 @@ function Carousel({ changer }: CarouselProps) {
                     disabled={isMovingLeft}
                     className='flex justify-center items-center bg-[#4E2513] w-[53px] h-7 rounded-lg hover:cursor-pointer'>
                     <img 
-                        src="Images/ArrowRight.svg" 
+                        src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/5999fd72b710dfcc024388d672a5f812279bb99a/Images/ArrowRight.svg" 
                         alt="Next"
                     />
                 </button>

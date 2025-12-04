@@ -9,7 +9,7 @@ function LandingPage() {
   return (
     <>
         <Navbar />
-      <div className="pt-20 flex flex-col w-full justify-center">
+      <div className="pt-15 flex flex-col w-full justify-center">
         {/* Carousel */}
         <div className="flex w-full justify-center">
             <Carousel changer={() => {}}/>

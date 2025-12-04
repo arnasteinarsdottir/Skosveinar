@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Button } from "@/Components/ui/button";
 import type { Product } from "./SearchGifts";
 import { DecorativeBorder } from "@/Components/DecorativeBorder";
-import { ChildrenPopUp } from "./ChildrenPopUp";
+import { Link } from "react-router-dom";
+
 
 interface ProductCardProps {
   product: Product;
@@ -10,8 +11,11 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, isCardMode }: ProductCardProps) {
+
   const [showPopup, setShowPopup] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  console.log(showPopup); 
+  console.log(selectedProduct); 
 
   const handleClick = () => {
     if (isCardMode) {
@@ -21,28 +25,16 @@ export function ProductCard({ product, isCardMode }: ProductCardProps) {
       localStorage.removeItem("selectedCard");
     }
   };
+let imageUrl = product.image;
 
-  // ⭐️⭐️ NEW LOGIC STARTS HERE ⭐️⭐️
-  let secureImageUrl = product.image;
-
-  // This checks if the image link is insecure (http://) 
-  // and attempts to use the secure protocol (https://) instead.
-  if (secureImageUrl && secureImageUrl.startsWith("http://")) {
-    secureImageUrl = secureImageUrl.replace("http://", "https://");
-  }
-  // ⭐️⭐️ NEW LOGIC ENDS HERE ⭐️⭐️
-
-  console.log("ORIGINAL IMAGE URL:", product.image);
-  console.log("CLEANED IMAGE URL:", secureImageUrl);
 
   return (
     <div className="relative margin-0 bg-[#EEE2D2] px-7 pt-7 pb-6 overflow-hidden">
-      {/* Decorative  border */}
       <DecorativeBorder />
 
       {/* Card content */}
       <img
-        src={secureImageUrl} // ⬅️ Using the cleaned URL
+        src={imageUrl}
         alt={product.title}
         className="w-full h-32 object-cover rounded mb-4"
       />
@@ -63,7 +55,7 @@ export function ProductCard({ product, isCardMode }: ProductCardProps) {
           {product.store}
         </a>
       </h5>
-
+       <Link to="/login">
       <Button
         onClick={handleClick}
         size="sm"
@@ -71,14 +63,8 @@ export function ProductCard({ product, isCardMode }: ProductCardProps) {
       >
         {isCardMode ? "Óska" : "Eyða"}
       </Button>
+      </Link>
 
-      {showPopup && selectedProduct && (
-        <ChildrenPopUp
-          visible={showPopup}
-          productToSave={selectedProduct}
-          onClose={() => setShowPopup(false)}
-        />
-      )}
     </div>
   );
 }

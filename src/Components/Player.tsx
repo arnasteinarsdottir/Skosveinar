@@ -31,7 +31,7 @@ function Player() {
       <div className="relative inline-block">
         <img
           className="w-full h-full object-cover"
-          src="/src/Pictures/Player-gryla.png"
+          src="https://github.com/arnasteinarsdottir/Skosveinar/blob/main/src/Pictures/Player-gryla.png?raw=true"
           alt="Player background"
         />
 
@@ -41,13 +41,13 @@ function Player() {
         >
           {isPlaying ? (
             <img
-              src="/src/Pictures/Stop-button.svg"
-              alt="Stop Player"
+              src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/Stop-button.svg"
+              alt="Stop-player-button"
             />
           ) : (
             <img
-              src="/src/Pictures/Player.svg"
-              alt="play"
+              src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/player.svg"
+              alt="Play-button"
             />
           )}
         </button>
@@ -81,7 +81,7 @@ function Player() {
 
         <audio
           ref={audioRef}
-          src="/src/Pictures/christmas-story.mp3"
+          src="/src/Pictures/short-christmas-story.mp3"
           onTimeUpdate={(e) =>
             setCurrentTime(e.currentTarget.currentTime)
           }

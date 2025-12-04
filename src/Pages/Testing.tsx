@@ -1,4 +1,3 @@
-import DemoDropdown from "@/Components/DemoDropdown";
 import LiveDropdown from "../Components/LiveDropdown"; 
 
 function Testing() {

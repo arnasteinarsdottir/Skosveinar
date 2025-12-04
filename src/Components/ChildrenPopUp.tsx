@@ -34,12 +34,7 @@ updated[childName].push({
   category: productToSave.category,
 });
 
-  // Product уже должен содержать price: number
-  const normalizedProduct: Product = {
-    ...productToSave,
-  };
-
-  updated[childName].push(normalizedProduct);
+ 
 
   localStorage.setItem("ChildrensCards", JSON.stringify(updated));
   onClose();
@@ -56,6 +51,7 @@ updated[childName].push({
               <Button
                 className="w-full bg-background text-darkred font-quicksand cursor-pointer border border-darkgreen"
                 onClick={() => handleSelect(child.name)}
+                
               >
                 {child.name}
               </Button>

@@ -1,6 +1,6 @@
 import AboutUs from "@/Components/AboutUs.tsx";
 import Navbar from "@/Components/Navbar.tsx";
-import { ResponsiveSlider } from "@/Components/responsive-slider";
+import { ResponsiveSlider } from "@/Components/Responsive-slider";
 import LogInLandigPage from "@/Components/LogInLandingPage.tsx";
 import Carousel from "@/Components/carousel";
 import { ProductCard } from "@/Components/ProductCard";
@@ -8,12 +8,15 @@ import { ProductCard } from "@/Components/ProductCard";
 function LandingPage() {
   return (
     <>
-        <Navbar />
+      <Navbar />
+
       <div className="pt-20 flex flex-col w-full justify-center">
+
         {/* Carousel */}
         <div className="flex w-full justify-center">
-          <Carousel />
+          <Carousel changer={() => {}} />
         </div>
+
         <AboutUs />
         <LogInLandigPage />
 
@@ -21,66 +24,71 @@ function LandingPage() {
           Skógjafa Óskalisti
         </h1>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center w-full">
           <ResponsiveSlider
-            items={[
-              <ProductCard
-                key="1"
-                isCardMode={true}
-                product={{
-                  title: "Leikfang",
-                  price: 2990,
-                  image: "https://placehold.co/300x200",
-                  link: "#",
-                  store: "Pollýanna",
-                }}
-              />,
-              <ProductCard
-                key="2"
-                isCardMode={true}
-                product={{
-                  title: "Bók",
-                  price: 4500,
-                  image: "https://placehold.co/300x200",
-                  link: "#",
-                  store: "Bóksalan",
-                }}
-              />,
-              <ProductCard
-                key="3"
-                isCardMode={true}
-                product={{
-                  title: "Aukahlutur",
-                  price: 1990,
-                  image: "https://placehold.co/300x200",
-                  link: "#",
-                  store: "Coolshop",
-                }}
-              />,
-              <ProductCard
-                key="4"
-                isCardMode={true}
-                product={{
-                  title: "Aukahlutur",
-                  price: 1990,
-                  image: "https://placehold.co/300x200",
-                  link: "#",
-                  store: "Coolshop",
-                }}
-              />,
-                 <ProductCard
-                key="4"
-                isCardMode={true}
-                product={{
-                  title: "Aukahlutur",
-                  price: 1990,
-                  image: "https://placehold.co/300x200",
-                  link: "#",
-                  store: "Coolshop",
-                }} />
-            ]}
-          />
-        </div>
+        items={[
+          <ProductCard
+            key="1"
+            isCardMode={true}
+            product={{
+              title: "Mjúkt bangsa",
+              price: 2990,
+              image: "https://images.unsplash.com/photo-1753079275337-8d6ce0c46c31?q=80&w=10250&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              link: "#",
+              store: "Pollýanna",
+            }}
+          />,
+
+          <ProductCard
+            key="2"
+            isCardMode={true}
+            product={{
+              title: "Viðarleikfang – Lestarsett",
+              price: 4500,
+              image: "https://plus.unsplash.com/premium_vector-1739328271722-5bf60b1a4340?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              link: "#",
+              store: "Bóksalan",
+            }}
+          />,
+
+          <ProductCard
+            key="3"
+            isCardMode={true}
+            product={{
+              title: "Litrík kubbasett",
+              price: 1990,
+              image: "https://images.unsplash.com/photo-1643790042511-dfa766bd4571?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              link: "#",
+              store: "Coolshop",
+            }}
+          />,
+
+          <ProductCard
+            key="4"
+            isCardMode={true}
+            product={{
+              title: "Púslið – Dýrin",
+              price: 2500,
+              image: "https://plus.unsplash.com/premium_vector-1741304749655-79451750f6e1?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              link: "#",
+              store: "Pollýanna",
+            }}
+          />,
+
+          <ProductCard
+            key="5"
+            isCardMode={true}
+            product={{
+              title: "Mjúkir leikfangavinir",
+              price: 1890,
+              image: "https://plus.unsplash.com/premium_vector-1739328271722-5bf60b1a4340?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              link: "#",
+              store: "Coolshop",
+            }}
+                    />
+                  ]}
+                />
+              </div>
 
       </div>
     </>

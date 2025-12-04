@@ -104,7 +104,8 @@ export default function SearchWithFilter() {
     params.set("price_max", priceRange[1].toString());
 
   // API request
-  const url = `http://89.160.200.111:3000/search?${params.toString()}`;
+  // const url = `http://89.160.200.111:3000/search?${params.toString()}`;
+  const url = `https://auglys.is/api/search?${params.toString()}`;
   console.log("Searching with URL:", url);
 
   // axios GET request

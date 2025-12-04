@@ -183,7 +183,7 @@ function Carousel({ changer }: CarouselProps) {
                     disabled={isMovingRight}
                     className='flex justify-center items-center bg-[#4E2513] w-[53px] h-7 rounded-lg hover:cursor-pointer'>
                     <img 
-                        src="Images/ArrowLeft.svg" 
+                        src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/aa311c4150c233f3042274f242fdd928c3152858/Images/ArrowLeft.svg" 
                         alt="Previous" 
                     />
                 </button>
@@ -195,7 +195,7 @@ function Carousel({ changer }: CarouselProps) {
                     disabled={isMovingLeft}
                     className='flex justify-center items-center bg-[#4E2513] w-[53px] h-7 rounded-lg hover:cursor-pointer'>
                     <img 
-                        src="Images/ArrowRight.svg" 
+                        src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/aa311c4150c233f3042274f242fdd928c3152858/Images/ArrowRight.svg" 
                         alt="Next"
                     />
                 </button>

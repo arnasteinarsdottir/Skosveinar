@@ -1,7 +1,7 @@
 
 
 import Navbar from "../Components/Navbar.tsx";
-import SearchGifts from "../Components/SearchGifts.tsx";
+import SearchGifts from "../Components/SearchPage/SearchGifts.tsx";
 
 function Leita() {
     return (

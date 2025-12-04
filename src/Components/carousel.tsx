@@ -1,7 +1,7 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 const images = [
-    'Images/12Stekkjarstaur.png',
+    '../../Images/12Stekkjarstaur.png',
     'Images/13Giljagaur.png',
     'Images/14Stufur.png',
     'Images/15Þvörusleikir.png',
@@ -48,12 +48,21 @@ const dates =[
     "24. des"
 ]
 
-const Carousel = () => {
+type CarouselProps = {
+  changer: (number: number) => void;
+};
+
+function Carousel({ changer }: CarouselProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const totalImages = images.length;
 
     const [isMovingLeft, setIsMovingLeft] = useState(false);
     const [isMovingRight, setIsMovingRight] = useState(false);
+
+    useEffect(() => {
+        if (changer)
+            changer(currentIndex);
+    }, [currentIndex]);
 
     const goToPrevious = () => {
         setIsMovingRight(true);

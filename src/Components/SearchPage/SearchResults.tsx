@@ -5,6 +5,7 @@ import { ChildrenPopUp } from "./ChildrenPopUp";
 import { DecorativeBorder } from "@/Components/DecorativeBorder";
 import { useState } from "react";
 
+// Props definition for SearchResults component
 interface SearchResultsProps {
   results: Product[];
   isCardMode: boolean; // New prop to indicate card mode
@@ -12,14 +13,20 @@ interface SearchResultsProps {
 
 
 export function SearchResults({ results, isCardMode }: SearchResultsProps) {
+  // State for popup visibility
   const [showPopup, setShowPopup] = useState(false);
+  // State for selected product
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   return (
+
+    // Responsive grid layout for product cards
     <div
       className="grid grid-cols-1 [@media(min-width:700px)]:grid-cols-2 [@media(min-width:970px)]:grid-cols-3 gap-6 mb-10 mt-4"
     >
       {results.map((item, i) => (
+
+        // Animated card container using framer-motion
         <motion.div
           key={i}
           initial={{ opacity: 0, y: 10 }}
@@ -27,7 +34,7 @@ export function SearchResults({ results, isCardMode }: SearchResultsProps) {
           transition={{ duration: 0.2 }}
           className="relative w-[280px] bg-[#EEE2D2] px-7 pt-7 pb-6 overflow-hidden"
         >
-          {/* Decorative brush border */}
+          {/* Decorative brush border around card */}
           <DecorativeBorder />
 
           {/* Card content */}
@@ -43,6 +50,7 @@ export function SearchResults({ results, isCardMode }: SearchResultsProps) {
               {item.store}
             </a>
           </h5>
+          
           <Button
             onClick={() => {
               if (isCardMode) {
@@ -60,6 +68,7 @@ export function SearchResults({ results, isCardMode }: SearchResultsProps) {
         </motion.div>
       ))}
 
+      {/* Popup for assigning product to a child */}
       {showPopup && selectedProduct && (
         <ChildrenPopUp
           visible={showPopup}

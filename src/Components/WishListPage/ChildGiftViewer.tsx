@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import type { Product } from "../SearchPage/SearchGifts";
-import { DecorativeBorder } from "@/Components/DecorativeBorder";
+import { DecorativeBorder } from "@/Components/SearchPage/DecorativeBorder";
 import { motion } from "framer-motion";
 import { Button } from "@/Components/ui/button";
 import DropDownChooseChild from "@/Components/WishListPage/DropDownChooseChild";

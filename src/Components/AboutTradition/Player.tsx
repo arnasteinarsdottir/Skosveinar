@@ -1,11 +1,16 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import audioFile from "/src/Pictures/short-christmas-story.mp3";
+
 
 function Player() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+
+ 
+
 
   const togglePlay = () => {
     if (!audioRef.current) return;
@@ -26,7 +31,7 @@ function Player() {
     duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-[1.69rem]">
+    <div className="min-h-screen flex flex-col items-center justify-center gap-[1.69rem] mt-4">
       {/* Player */}
       <div className="relative inline-block">
         <img
@@ -81,7 +86,7 @@ function Player() {
 
         <audio
           ref={audioRef}
-          src="/src/Pictures/short-christmas-story.mp3"
+          src={audioFile}
           onTimeUpdate={(e) =>
             setCurrentTime(e.currentTarget.currentTime)
           }

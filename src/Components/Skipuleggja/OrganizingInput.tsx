@@ -1,4 +1,5 @@
 import BrownFilledButton from "../../Components/Skipuleggja/BrownFilledButton.tsx"
+
 type Props = {
     inputGiftIdeas: string,
     inputGiftPrice: number
@@ -12,6 +13,7 @@ function OrganizingInput ({inputGiftIdeas, inputGiftPrice, updateGiftIdeas, upda
     return (
         <form>
             <div className="flex flex-col w-[350px]">
+                <BrownFilledButton />
                 <textarea
                     value = {inputGiftIdeas}
                     onChange = {(e) => updateGiftIdeas(e.target.value)}

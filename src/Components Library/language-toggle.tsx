@@ -7,7 +7,7 @@ export default function LanguageToggle() {
     <div className="flex flex-col items-center mr-[1.81rem] mt-18">
       {/* Label */}
       <div className="text-center">
-        <p className="font-cinzel text-[0.75rem] uppercase text-[#F2ECDC] pb-1 ">
+        <p className="font-cinzel text-[0.75rem] uppercase text-background pb-1 ">
           {isEnabled ? "ENGLISH" : "ICELANDIC"}
         </p>
       </div>

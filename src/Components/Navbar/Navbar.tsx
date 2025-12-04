@@ -42,22 +42,22 @@ export default function Navbar() {
 
       ">
 <Link to="/search" className="flex flex-col items-center">
-  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/brown-searchicon.svg" />
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/0f3bac7bbc26d8008d0ed71e29a7b20c6808b67f/src/Pictures/brown-searchicon.svg" />
   Leita
 </Link>
 
-<Link to="/Organize" className="flex flex-col items-center mt-1">
-  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/brown-organize-icon.svg" />
+<Link to="/Organize" className="flex flex-col items-center">
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/0f3bac7bbc26d8008d0ed71e29a7b20c6808b67f/src/Pictures/brown-organize-icon.svg" />
   Skipuleggja
 </Link>
 
 <Link to="/wishlist" className="flex flex-col items-center">
-  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/brown-wishlist-icon.svg" />
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/0f3bac7bbc26d8008d0ed71e29a7b20c6808b67f/src/Pictures/brown-wishlist-icon.svg" />
   Óskalisti
 </Link>
 
 <Link to="/AboutTradition" className="flex flex-col items-center">
-  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/brown-hat-icon.svg" />
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/0f3bac7bbc26d8008d0ed71e29a7b20c6808b67f/src/Pictures/brown-hat-icon.svg" />
   Um hefðina
 </Link>
 

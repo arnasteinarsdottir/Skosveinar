@@ -9,7 +9,7 @@ export function BurgerMenu() {
     <>
       {/* Burger icon*/}
       <img
-        src="src/Pictures/brown-burger-menu.svg"
+        src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/5999fd72b710dfcc024388d672a5f812279bb99a/src/Pictures/brown-burger-menu.svg"
         alt="menu"
         className="md:hidden cursor-pointer"
         onClick={() => setOpen(true)}

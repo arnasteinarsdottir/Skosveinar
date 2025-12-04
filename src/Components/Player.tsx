@@ -81,7 +81,7 @@ function Player() {
 
         <audio
           ref={audioRef}
-          src="/src/Pictures/christmas-story.mp3"
+          src="/src/Pictures/short-christmas-story.mp3"
           onTimeUpdate={(e) =>
             setCurrentTime(e.currentTarget.currentTime)
           }

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "@/Components/ui/button";
 import type { Product } from "./SearchGifts";
 import { DecorativeBorder } from "@/Components/DecorativeBorder";
+import { Link } from "react-router-dom";
+
 
 interface ProductCardProps {
   product: Product;
@@ -23,19 +25,8 @@ export function ProductCard({ product, isCardMode }: ProductCardProps) {
       localStorage.removeItem("selectedCard");
     }
   };
+let imageUrl = product.image;
 
-  // ⭐ FIXED IMAGE URL HANDLING ⭐
-  let imageUrl = product.image || "";
-
-  // If API gives a relative path → add server URL
-  if (imageUrl.startsWith("/")) {
-    imageUrl = "http://89.160.200.111:3000" + imageUrl;
-  }
-
-  // If API uses http → upgrade to https if possible
-  if (imageUrl.startsWith("http://")) {
-    imageUrl = imageUrl.replace("http://", "https://");
-  }
 
   return (
     <div className="relative margin-0 bg-[#EEE2D2] px-7 pt-7 pb-6 overflow-hidden">
@@ -64,7 +55,7 @@ export function ProductCard({ product, isCardMode }: ProductCardProps) {
           {product.store}
         </a>
       </h5>
-
+       <Link to="/login">
       <Button
         onClick={handleClick}
         size="sm"
@@ -72,6 +63,7 @@ export function ProductCard({ product, isCardMode }: ProductCardProps) {
       >
         {isCardMode ? "Óska" : "Eyða"}
       </Button>
+      </Link>
 
     </div>
   );

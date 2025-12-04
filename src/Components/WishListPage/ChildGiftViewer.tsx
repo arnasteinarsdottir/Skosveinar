@@ -53,9 +53,9 @@ export default function ChildGiftViewer() {
     <div 
       className="relative min-h-screen mx-auto flex flex-col items-center min-w-[430px] max-[430px]:px-[35px]">
       <img
-        src="src/Pictures/köttur.png"
+        
         className="absolute top-50 z-0 [@media(min-width:430px)]:right-15 [@media(max-width:1440px)]:right-30"
-    
+        src="https://github.com/arnasteinarsdottir/Skosveinar/blob/main/src/Pictures/k%C3%B6ttur.png?raw=true"
         alt="Jólaköttur"
       />
       {/* Main title */}

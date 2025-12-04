@@ -1,19 +1,20 @@
 import {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 const images = [
-    '../../Images/12Stekkjarstaur.png',
-    'Images/13Giljagaur.png',
-    'Images/14Stufur.png',
-    'Images/15Þvörusleikir.png',
-    'Images/16Pottaskefill.png',
-    'Images/17Askasleikir.png',
-    'Images/18Hurðaskellir.png',
-    'Images/19Skyrgámur.png',
-    'Images/20Bjúgnakrækir.png',
-    'Images/21Gluggagægir.png',
-    'Images/22Gáttaþefur.png',
-    'Images/23Ketkrókur.png',
-    'Images/24Kertasníkir.png'
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/12Stekkjarstaur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/13Giljagaur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/14Stufur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/15%C3%9Ev%C3%B6rusleikir.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/16Pottaskefill.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/17Askasleikir.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/18Hur%C3%B0askellir.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/19Skyrg%C3%A1mur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/20Bj%C3%BAgnakr%C3%A6kir.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/21Gluggag%C3%A6gir.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/22G%C3%A1tta%C3%BEefur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/23Ketkr%C3%B3kur.png?raw=true',
+    'https://github.com/arnasteinarsdottir/Skosveinar/blob/main/Images/24Kertasn%C3%ADkir.png?raw=true'
 ]
 
 const santas =[
@@ -129,7 +130,7 @@ function Carousel({ changer }: CarouselProps) {
 
                 {/* Large center*/}
                 <div className={`inline-block ${isMovingLeft && "transition-all duration-400 ease-in-out scale-[71.5%] md:scale-[70%] origin-top-left ml-[px] md:ml-[-60px]"} ${isMovingRight && "transition-all duration-400 ease-in-out scale-[71.5%] md:scale-[70%] origin-top-right"}`}>
-                    <a href="#">
+                    <Link to="../AboutTradition">
                         <img 
                             src={images[currentIndex]}
                             alt={santas[currentIndex]} 
@@ -138,7 +139,7 @@ function Carousel({ changer }: CarouselProps) {
                         <p className={`w-[140px] md:w-[200px] font-[quicksand] text-[17.5px] md:text-[25px] font-semibold text-center`}>
                             {santas[currentIndex]}
                         </p>
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Medium right*/}
@@ -183,7 +184,7 @@ function Carousel({ changer }: CarouselProps) {
                     disabled={isMovingRight}
                     className='flex justify-center items-center bg-[#4E2513] w-[53px] h-7 rounded-lg hover:cursor-pointer'>
                     <img 
-                        src="Images/ArrowLeft.svg" 
+                        src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/5999fd72b710dfcc024388d672a5f812279bb99a/Images/ArrowLeft.svg" 
                         alt="Previous" 
                     />
                 </button>
@@ -195,7 +196,7 @@ function Carousel({ changer }: CarouselProps) {
                     disabled={isMovingLeft}
                     className='flex justify-center items-center bg-[#4E2513] w-[53px] h-7 rounded-lg hover:cursor-pointer'>
                     <img 
-                        src="Images/ArrowRight.svg" 
+                        src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/5999fd72b710dfcc024388d672a5f812279bb99a/Images/ArrowRight.svg" 
                         alt="Next"
                     />
                 </button>

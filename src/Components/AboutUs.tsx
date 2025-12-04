@@ -39,7 +39,7 @@ function AboutUs() {
         <img
           className="
             absolute
-            bottom-0
+            -bottom-9
             w-[150px]
             -right-8
             md:w-[220px]

@@ -30,7 +30,7 @@ function AboutTradition() {
         <>
         <div className="pt-20"></div>
         <Navbar/>
-        <div className="flex w-full justify-center mt-[-20px]">
+        <div className="flex w-full justify-center mt-5">
             <Carousel changer={showText}/>
         </div>
         <div className="flex w-full justify-center mt-10">

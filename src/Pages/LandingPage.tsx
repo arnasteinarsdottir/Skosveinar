@@ -1,6 +1,6 @@
 import AboutUs from "@/Components/AboutUs.tsx";
 import Navbar from "@/Components/Navbar.tsx";
-import { ResponsiveSlider } from "@/Components/Responsive-slider";
+import { ResponsiveSlider } from "@/Components/responsive-slider";
 import LogInLandigPage from "@/Components/LogInLandingPage.tsx";
 import Carousel from "@/Components/carousel";
 import { ProductCard } from "@/Components/ProductCard";

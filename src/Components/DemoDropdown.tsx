@@ -2,7 +2,7 @@ import { PiCaretDownBold } from "react-icons/pi";
 import { useState } from "react";
 
 
-function LiveDropdown() {
+function DemoDropdown() {
     
     // Here is our open/close state
     const [isOpen, setIsOpen] = useState(false);
@@ -77,4 +77,4 @@ function LiveDropdown() {
     )
 }
 
-export default LiveDropdown;
+export default DemoDropdown;

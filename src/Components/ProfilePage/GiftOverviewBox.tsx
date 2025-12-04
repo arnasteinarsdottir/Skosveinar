@@ -1,4 +1,4 @@
-import EditIcon from "../Pictures/edit-icon.svg"
+import EditIcon from "/src/Pictures/edit-icon.svg"
 import { Link } from "react-router-dom";
 type Props = {
   date: string;

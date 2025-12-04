@@ -7,7 +7,7 @@ import { FilterMenu } from "@/Components/FilterMenu";
 import { Button } from "@/Components/ui/button";
 
 
-// --- types ---
+// Product type definition for search results
 export interface Product {
   title: string;
   price: number;
@@ -17,26 +17,31 @@ export interface Product {
   category?: string;
 }
 
-// --- consts ---
+// Available categories and stores for filtering
 const categories = ["Bækur", "Leikföng", "Aukahlutir"];
 const stores = ["Pollýanna", "Bóksala stúdenta", "Coolshop"];
 
+// Filters type for localStorage persistence
 type FiltersFromStorage = {
   selectedCategories: string[];
   selectedStores: string[];
   priceRange: [number, number];
 };
 
+// Load filters from localStorage or return default values
 function loadFilters(): FiltersFromStorage {
   if (typeof window === "undefined") {
+    // Server-side rendering check
     return { selectedCategories: [], selectedStores: [], priceRange: [0, 5000] };
   }
 
+  // Retrieve saved filters from localStorage
   const saved = localStorage.getItem("filters");
   if (!saved) {
+    // No saved filters found
     return { selectedCategories: [], selectedStores: [], priceRange: [0, 5000] };
   }
-
+  // Parse and return saved filters
   try {
     const parsed = JSON.parse(saved);
     return {
@@ -49,6 +54,7 @@ function loadFilters(): FiltersFromStorage {
   }
 }
 
+// Main search component with filtering functionality
 export default function SearchWithFilter() {
   const filters = loadFilters();
 
@@ -65,7 +71,7 @@ export default function SearchWithFilter() {
   );
   const [results, setResults] = useState<Product[]>([]);
 
-  // Save filters to localStorage whenever they change 
+  // Persist filters to localStorage on change
   useEffect(() => {
     localStorage.setItem(
       "filters",
@@ -73,77 +79,64 @@ export default function SearchWithFilter() {
     );
   }, [selectedCategories, selectedStores, priceRange]);
 
+  // Toggle filter menu visibility
   const toggleFilter = () => setShowFilter((prev) => !prev);
 
   const handleSearch = async () => {
     setShowFilter(false);
 
     const params = new URLSearchParams();
-    params.set("q", query);
-    if (selectedCategories.length)
+
+    // Add query if not empty
+    if (query.trim()) {
+      params.set("q", query.trim());
+    }
+    // Add query if not empty
+    if (selectedCategories.length) {
       params.set("category", selectedCategories.join(","));
-    if (selectedStores.length) params.set("stores", selectedStores.join(","));
+    }
+    // Add query if not empty
+    if (selectedStores.length) {
+      params.set("stores", selectedStores.join(","));
+    }
+    // Add price range
     params.set("price_min", priceRange[0].toString());
     params.set("price_max", priceRange[1].toString());
 
-    const url = `https://89.160.200.111:3000/search?${params.toString()}`;
-    console.log("Searching with URL:", url);
+  // API request
+  const url = `http://89.160.200.111:3000/search?${params.toString()}`;
+  console.log("Searching with URL:", url);
 
-    try {
-      const response = await axios.get<Product[]>(url);
-      let filtered = response.data;
-
-      if (query.trim()) {
-        const q = query.toLowerCase();
-        filtered = filtered.filter(
-          (item) =>
-            item.title?.toLowerCase().includes(q) ||
-            item.store?.toLowerCase().includes(q)
-        );
-      }
-
-      if (selectedCategories.length) {
-        filtered = filtered.filter((item) =>
-          selectedCategories.includes(item.category || "")
-        );
-      }
-
-      if (selectedStores.length) {
-        filtered = filtered.filter((item) =>
-          selectedStores.includes(item.store)
-        );
-      }
-
-      filtered = filtered.filter(
-        (item) => item.price >= priceRange[0] && item.price <= priceRange[1]
-      );
-
-      setResults(filtered);
-    } catch (err) {
-      console.error("Search error:", err);
-    }
-  };
+  // axios GET request
+  try {
+    const response = await axios.get<Product[]>(url);
+    setResults(response.data);
+  } catch (err) {
+    console.error("Search error:", err);
+  }
+};
 
   return (
+    // Main container
     <div className="py-4 space-y-4 bg-background min-h-screen mx-auto flex flex-col items-center min-w-[430px] max-[430px]:px-[35px]">
      
-      <div className="flex flex-row items-start mt-36 gap-6">
+      {/* Header with title and image */}
+      <div className="flex flex-col mt-36 ">
+        <h4 className="font-cinzel text-[37.5px]  text-darkbrown mt-0">
+          Leita að skó­gjöfum
+        </h4>
         <img
           src="https://github.com/arnasteinarsdottir/Skosveinar/blob/main/src/Pictures/gryla1.png?raw=true"
           className="w-[150px] h-[100px] mt-7"
           alt="Gryla"
         />
-        <h4 className="font-cinzel text-[37.5px] text-darkbrown mt-0">
-          Leita að skó­gjöfum
-        </h4>
       </div>
 
-      {/* search bar + filter button */}
+      {/* Search bar + filter toggle button */}
       <div className="flex items-center gap-3.5 mt-2 mb-4">
         <div className="relative w-[310px]">
           <Input
-            className="flex justify-between font-quicksand items-center w-[310px] py-2.5 rounded-[5px] border border-darkbrown bg-bgsecondary focus:outline-none focus:bg-lightbackground focus-visible:outline-none focus-visible:ring-[0,5px]
- focus:ring-darkgreen"
+            className="flex justify-between font-quicksand items-center w-[310px] py-2.5 rounded-[5px] border border-darkbrown bg-bgsecondary focus:outline-none focus:bg-lightbackground focus-visible:outline-none focus-visible:ring-[0,5px] focus:ring-darkgreen"
             placeholder="Leita"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -171,25 +164,25 @@ export default function SearchWithFilter() {
         </Button>
       </div>
 
+      {/* Filter menu with animation */}    
       <AnimatePresence>
-  {showFilter && (
-    
-    <FilterMenu
-      categories={categories}
-      stores={stores}
-      selectedCategories={selectedCategories}
-      setSelectedCategories={setSelectedCategories}
-      selectedStores={selectedStores}
-      setSelectedStores={setSelectedStores}
-      priceRange={priceRange}
-      setPriceRange={setPriceRange}
-      handleSearch={handleSearch}
-    />
-  )}
-</AnimatePresence>
+        {showFilter && (
+          <FilterMenu
+            categories={categories}
+            stores={stores}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            selectedStores={selectedStores}
+            setSelectedStores={setSelectedStores}
+            priceRange={priceRange}
+            setPriceRange={setPriceRange}
+            handleSearch={handleSearch}
+          />
+        )}
+      </AnimatePresence>
 
 
-      {/* Search results */}
+      {/* Search results grid */}
       <SearchResults results={results} isCardMode={true} />
     </div>
   );

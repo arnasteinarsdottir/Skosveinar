@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import type { Product } from "./SearchGifts";
+import type { Product } from "../SearchPage/SearchGifts";
 import { DecorativeBorder } from "@/Components/DecorativeBorder";
 import { motion } from "framer-motion";
 import { Button } from "@/Components/ui/button";
-import DropDownChooseChild from "@/Components/DropDownChooseChild";
+import DropDownChooseChild from "@/Components/WishListPage/DropDownChooseChild";
 
 
 
@@ -49,19 +49,22 @@ export default function ChildGiftViewer() {
   };
 
   return (
+    // Main container
     <div 
-      className="relative">
+      className="relative min-h-screen mx-auto flex flex-col items-center min-w-[430px] max-[430px]:px-[35px]">
       <img
+        
+        className="absolute top-50 z-0 [@media(min-width:430px)]:right-15 [@media(max-width:1440px)]:right-30"
         src="https://github.com/arnasteinarsdottir/Skosveinar/blob/main/src/Pictures/k%C3%B6ttur.png?raw=true"
-        className="absolute top-24 right-22 z-0"
         alt="Jólaköttur"
       />
-      <h4 className="w-full flex flex-col items-center mb-10 mt-40 text-darkbrown font-cinzel text-[37.5px] space-y-6">
-        Óskalistar
+      {/* Main title */}
+      <h4 className="w-full flex flex-col items-center mb-10 mt-20 text-darkbrown font-cinzel text-[37.5px] space-y-6">
+        Óskalisti
       </h4>
            
       
-      <div className="w-full max-w-[220px]  mt-2 px-[35px]">
+      <div className=" w-full flex flex-col items-center ">
         
         {/* Dropdown menu */}
         
@@ -76,14 +79,15 @@ export default function ChildGiftViewer() {
 
         {/* Product list */}
         {selectedChild && (
-          <div className="grid items-center grid-cols-1 [@media(min-width:700px)]:grid-cols-2 [@media(min-width:970px)]:grid-cols-3 gap-6 mb-16 px-[130px] mt-16">
+          <div className="grid grid-cols-1 [@media(min-width:700px)]:grid-cols-2 [@media(min-width:970px)]:grid-cols-3 gap-6 mb-10 mt-10">
 
             {childProducts.length === 0 ? (
-              <h5 className="text-darkgreen font-quicksand mt-12 text-[20px] ">Engar gjafir skráðar</h5>
+              <h5 className="text-darkgreen font-quicksand mt-10 text-[20px] ">Engar gjafir skráðar</h5>
             ) : (
               
               childProducts.map((product, index) => (
                 
+                // Animated product card
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 10 }}
@@ -91,7 +95,7 @@ export default function ChildGiftViewer() {
                     transition={{ duration: 0.2 }}
                     className="relative w-[280px] bg-[#EEE2D2] px-7 pt-7 pb-6 overflow-hidden"
                   >
-                    
+                   {/* Decorative border component  */}
                   <DecorativeBorder />
                           
                   <img

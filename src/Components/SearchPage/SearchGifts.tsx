@@ -3,7 +3,7 @@ import { Input } from "@/Components/ui/input";
 import axios from "axios";
 import { SearchResults } from "./SearchResults";
 import { AnimatePresence } from "framer-motion";
-import { FilterMenu } from "@/Components/FilterMenu";
+import { FilterMenu } from "@/Components/SearchPage/FilterMenu";
 import { Button } from "@/Components/ui/button";
 
 

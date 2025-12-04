@@ -6,7 +6,6 @@ export default function Navbar() {
     <nav className="
       fixed top-0 left-0 right-0 z-50 
       h-22           
-     md:bg-darkbrown
      bg-background
       flex items-center justify-between 
       px-10
@@ -25,7 +24,7 @@ export default function Navbar() {
 
   {/* Desktop logo */}
   <img
-    src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/logo-skosveinar.svg"
+    src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/aa311c4150c233f3042274f242fdd928c3152858/src/Pictures/logo-brown-navbar.svg"
     alt="Logo"
     className="hidden md:block w-15 h-15"
   />
@@ -36,29 +35,29 @@ export default function Navbar() {
         gap-10 
         font-cinzel
         uppercase
-        text-background
+        text-darkbrown
         text-[20px]
         items-center
         mr-10
 
       ">
 <Link to="/search" className="flex flex-col items-center">
-  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/searchicon.svg" />
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/brown-searchicon.svg" />
   Leita
 </Link>
 
 <Link to="/Organize" className="flex flex-col items-center mt-1">
-  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/shoeicon.svg" />
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/brown-organize-icon.svg" />
   Skipuleggja
 </Link>
 
 <Link to="/wishlist" className="flex flex-col items-center">
-  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/staricon.svg" />
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/brown-wishlist-icon.svg" />
   Óskalisti
 </Link>
 
 <Link to="/AboutTradition" className="flex flex-col items-center">
-  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/hat-icon.svg" />
+  <img src="https://raw.githubusercontent.com/arnasteinarsdottir/Skosveinar/573cc37afd358cfe376d6255d41f792af4edb2d2/src/Pictures/brown-hat-icon.svg" />
   Um hefðina
 </Link>
 

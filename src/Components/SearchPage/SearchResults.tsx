@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/Components/ui/button";
 import type { Product } from "./SearchGifts";
 import { ChildrenPopUp } from "./ChildrenPopUp";
-import { DecorativeBorder } from "@/Components/DecorativeBorder";
+import { DecorativeBorder } from "@/Components/SearchPage/DecorativeBorder";
 import { useState } from "react";
 
 // Props definition for SearchResults component

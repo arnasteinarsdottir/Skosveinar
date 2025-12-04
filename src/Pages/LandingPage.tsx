@@ -1,9 +1,9 @@
-import AboutUs from "@/Components/AboutUs.tsx";
-import Navbar from "@/Components/Navbar.tsx";
-import { ResponsiveSlider } from "@/Components/responsive-slider";
-import LogInLandigPage from "@/Components/LogInLandingPage.tsx";
-import Carousel from "@/Components/carousel";
-import { ProductCard } from "@/Components/ProductCard";
+import AboutUs from ".././Components/LandingPage/AboutUs.tsx";
+import Navbar from ".././Components/Navbar/Navbar.tsx"; 
+import { ResponsiveSlider } from ".././Components/LandingPage/Responsive-slider.tsx";
+import LogInLandigPage from ".././Components/LandingPage/LogInLandingPage.tsx";
+import Carousel from ".././Components/LandingPage/Carousel.tsx";
+import { ProductCard } from ".././Components/LandingPage/ProductCard.tsx";
 
 function LandingPage() {
   return (

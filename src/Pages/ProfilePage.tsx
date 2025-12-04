@@ -1,9 +1,9 @@
-import GiftOverviewBox from "../Components/GiftOverviewBox";
-import TotalPriceCalculator from "../Components/TotalPriceCalculator";
-import FancyDropdown from "../Components/FancyDropdown";
-import BrownFilledButton from "../Components/BrownFilledButton";
-import AddChildModal from "../Components/AddChildModal";
-import Navbar from "../Components/Navbar"; 
+import GiftOverviewBox from "../Components/ProfilePage/GiftOverviewBox";
+import TotalPriceCalculator from "../Components/ProfilePage/TotalPriceCalculator";
+import FancyDropdown from "../Components/Skipuleggja/FancyDropdown.tsx";
+import BrownFilledButton from "./../Components/Skipuleggja/BrownFilledButton";
+import AddChildModal from "../Components/ProfilePage/AddChildModal.tsx";
+import Navbar from ".././Components/Navbar/Navbar.tsx"; 
 import {useState} from "react"; 
 
 type Gift = {

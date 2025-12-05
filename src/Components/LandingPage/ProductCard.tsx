@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/Components/ui/button";
-import type { Product } from "./SearchGifts";
+import type { Product } from "@/Components/SearchPage/SearchGifts";
 import { DecorativeBorder } from "@/Components/DecorativeBorder";
 import { Link } from "react-router-dom";
 

@@ -1,9 +1,9 @@
-import GiftOverviewBox from "../Components/GiftOverviewBox";
-import TotalPriceCalculator from "../Components/TotalPriceCalculator";
-import FancyDropdown from "../Components/FancyDropdown";
-import BrownFilledButton from "../Components/BrownFilledButton";
-import AddChildModal from "../Components/AddChildModal";
-import Navbar from "../Components/Navbar"; 
+import GiftOverviewBox from "../Components/ProfilePage/GiftOverviewBox";
+import TotalPriceCalculator from "../Components/ProfilePage/TotalPriceCalculator";
+import FancyDropdown from "../Components/Skipuleggja/FancyDropdown.tsx";
+import BrownFilledButton from "./../Components/Skipuleggja/BrownFilledButton";
+import AddChildModal from "../Components/ProfilePage/AddChildModal.tsx";
+import Navbar from ".././Components/Navbar/Navbar.tsx"; 
 import {useState} from "react"; 
 
 type Gift = {
@@ -73,17 +73,17 @@ function ProfilePage() {
     <>
       <Navbar />
       <div className="mt-40"></div>
-      <div className="flex flex-col items-center">
-        <div className="w-[85%] max-w-4xl md:w-[58%] px-8 sm:px-6">
-          <div className="flex items-center justify-between">
-            <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
-            <BrownFilledButton 
-              label = "Skrá barn"
-              onClick = {() => setIsModalOpen(true)}
-            />
-          </div>
+      <div className=" flex flex-col items-center">
+        <div className ="mb-30">
+        <Navbar />
         </div>
-        <div className="flex items-center pt-20 pb-4 justify-center">
+        <div className="flex justify-between items-start w-98 mt-14">
+          <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
+          <BrownFilledButton 
+            onClick = {() => setIsModalOpen(true)}
+          />
+        </div>
+        <div className="w-98 flex justify-end pt-12 md:flex md:justify-center">
           <TotalPriceCalculator TotalPrice={CalculateTotalPrice()}/>
         </div>
         <div className="py-6 grid grid-cols-1 md:grid-cols-2 gap-6">

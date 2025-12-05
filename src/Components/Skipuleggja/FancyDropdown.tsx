@@ -1,4 +1,4 @@
-import ArrowDownIcon from "../Pictures/arrow-down-icon.svg";
+import ArrowDownIcon from "/src/Pictures/arrow-down-icon.svg";
 import { useState, useEffect, useRef } from "react";
 
 type Props = {

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Button } from "../Components Library/ui/button"
+import { Button } from "../../Components Library/ui/button"
 
 export function BurgerMenu() {
   const [open, setOpen] = useState(false)

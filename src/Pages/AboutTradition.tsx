@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Navbar from "../Components/Navbar"; 
-import Player from "../Components/Player";
-import Carousel from "../Components/carousel";
+import Navbar from ".././Components/Navbar/Navbar.tsx"; 
+import Player from ".././Components/AboutTradition/Player.tsx";
+import Carousel from ".././Components/LandingPage/Carousel.tsx";
 
 const texts = [
     "Stekkjastaur kom fyrstur,\nstinnur eins og tré.\nHann laumaðist í fjárhúsin\nog lék á bóndans fé.\n\nHann vildi sjúga ærnar,\n-þá varð þeim ekki um sel,\nþví greyið hafði staurfætur,\n-það gekk nú ekki vel.",
@@ -30,7 +30,7 @@ function AboutTradition() {
         <>
         <div className="pt-20"></div>
         <Navbar/>
-        <div className="flex w-full justify-center mt-5">
+        <div className="flex w-full justify-center mt-[-20px]">
             <Carousel changer={showText}/>
         </div>
         <div className="flex w-full justify-center mt-10">

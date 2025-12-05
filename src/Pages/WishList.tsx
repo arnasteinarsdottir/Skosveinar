@@ -1,5 +1,5 @@
-import Navbar from "../Components/Navbar.tsx";
-import ChildGiftViewer from "../Components/ChildGiftViewer.tsx";
+import Navbar from ".././Components/Navbar/Navbar.tsx"; 
+import ChildGiftViewer from ".././Components/WishListPage/ChildGiftViewer.tsx";
 
 function WishList() {
     return (

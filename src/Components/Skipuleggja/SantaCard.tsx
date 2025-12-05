@@ -1,17 +1,17 @@
-import BlankSantaCard from "../Pictures/santa-card.svg";
-import Stekkjastaur from "../../Images/12Stekkjarstaur.png";
-import Giljagaur from "../../Images/13Giljagaur.png";
-import Stúfur from "../../Images/14Stufur.png";
-import Þvörusleikir from "../../Images/15Þvörusleikir.png";
-import Pottaskefill from "../../Images/16Pottaskefill.png"
-import Askasleikir from "../../Images/17Askasleikir.png";
-import Hurðaskellir from "../../Images/18Hurðaskellir.png";
-import Skyrgámur from "../../Images/19Skyrgámur.png";
-import Bjúgnakrækir from "../../Images/20Bjúgnakrækir.png";
-import Gluggagægir from "../../Images/21Gluggagægir.png";
-import Gáttaþefur from "../../Images/22Gáttaþefur.png";
-import Ketkrókur from "../../Images/23Ketkrókur.png";
-import Kertasníkir from "../../Images/24Kertasníkir.png"; 
+import BlankSantaCard from "/src/Pictures/santa-card.svg";
+import Stekkjastaur from "/src/Pictures/12Stekkjarstaur.png";
+import Giljagaur from "/Images/13Giljagaur.png";
+import Stúfur from "/Images/14Stufur.png";
+import Þvörusleikir from "/Images/15Þvörusleikir.png";
+import Pottaskefill from "/Images/16Pottaskefill.png"
+import Askasleikir from "/Images/17Askasleikir.png";
+import Hurðaskellir from "/Images/18Hurðaskellir.png";
+import Skyrgámur from "/Images/19Skyrgámur.png";
+import Bjúgnakrækir from "/Images/20Bjúgnakrækir.png";
+import Gluggagægir from "/Images/21Gluggagægir.png";
+import Gáttaþefur from "/Images/22Gáttaþefur.png";
+import Ketkrókur from "/Images/23Ketkrókur.png";
+import Kertasníkir from "/Images/24Kertasníkir.png"; 
 
 
 

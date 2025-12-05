@@ -1,7 +1,7 @@
-import FancyDropdown from "../Components/FancyDropdown";
-import OrganizingInput from "../Components/OrganizingInput";
-import SantaCard from "../Components/SantaCard";
-import Navbar from "../Components/Navbar";
+import FancyDropdown from "../Components/Skipuleggja/FancyDropdown.tsx";
+import OrganizingInput from "../Components/Skipuleggja/OrganizingInput.tsx";
+import SantaCard from "../Components/Skipuleggja/SantaCard.tsx";
+import Navbar from ".././Components/Navbar/Navbar.tsx"; 
 import { useState } from "react";
 
 type Child = {

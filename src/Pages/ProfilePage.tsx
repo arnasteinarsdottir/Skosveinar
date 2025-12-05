@@ -78,6 +78,7 @@ function ProfilePage() {
           <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
           <BrownFilledButton 
             onClick = {() => setIsModalOpen(true)}
+            label = "Skrá barn"
           />
         </div>
         <div className="w-98 flex justify-end pt-12 md:flex md:justify-center">

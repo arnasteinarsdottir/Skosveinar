@@ -1,4 +1,5 @@
 import BrownFilledButton from "../../Components/Skipuleggja/BrownFilledButton.tsx"
+
 type Props = {
     inputGiftIdeas: string,
     inputGiftPrice: number

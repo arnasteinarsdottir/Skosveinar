@@ -74,13 +74,11 @@ function ProfilePage() {
       <Navbar />
       <div className="mt-40"></div>
       <div className=" flex flex-col items-center">
-        <div className ="mb-30">
-        <Navbar />
-        </div>
         <div className="flex justify-between items-start w-98 mt-14">
           <FancyDropdown selectOption = {selectChild} optionSelected = {nameSelected} options = {options} />
           <BrownFilledButton 
             onClick = {() => setIsModalOpen(true)}
+            label = "Skrá barn"
           />
         </div>
         <div className="w-98 flex justify-end pt-12 md:flex md:justify-center">

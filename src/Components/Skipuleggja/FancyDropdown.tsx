@@ -64,7 +64,7 @@ function FancyDropdown({ selectOption, optionSelected, options }: Props) {
             >
                 {options.map((option) => (
                     <span
-                        key={option}
+                        key={option} 
                         onClick={() => {
                             selectOption(option);
                             setIsOpen(false);

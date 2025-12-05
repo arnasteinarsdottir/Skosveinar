@@ -3,7 +3,7 @@ import { Input } from "@/Components/ui/input";
 import axios from "axios";
 import { SearchResults } from "./SearchResults";
 import { AnimatePresence } from "framer-motion";
-import { FilterMenu } from "@/Components/FilterMenu";
+import { FilterMenu } from "@/Components/SearchPage/FilterMenu";
 import { Button } from "@/Components/ui/button";
 
 
@@ -104,7 +104,8 @@ export default function SearchWithFilter() {
     params.set("price_max", priceRange[1].toString());
 
   // API request
-  const url = `http://89.160.200.111:3000/search?${params.toString()}`;
+  // const url = `http://89.160.200.111:3000/search?${params.toString()}`;
+  const url = `https://auglys.is/api/search?${params.toString()}`;
   console.log("Searching with URL:", url);
 
   // axios GET request
